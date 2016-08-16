@@ -1,0 +1,27 @@
+{
+  "name": "test",
+  "resources": [
+    {
+      "path": "test.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "a1",
+            "label": "Select item.",
+            "type": "cat"
+          },
+          {
+            "name": "b1",
+            "label": "Enter text.",
+            "type": "string"
+          },
+          {
+            "name": "c1",
+            "label": "Enter number.",
+            "type": "number"
+          }
+        ]
+      }
+    }
+  ]
+}
