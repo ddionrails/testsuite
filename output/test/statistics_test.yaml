@@ -1,0 +1,60 @@
+- dataset: test
+  label: Select item.
+  scale: cat
+  study: testsuite
+  uni:
+  - frequencies: []
+    labels: []
+    missings: []
+    values: []
+    weighted: []
+  variable: a1
+- dataset: test
+  label: Enter text.
+  scale: string
+  study: testsuite
+  uni:
+  - frequencies: []
+    missings: []
+  variable: b1
+- dataset: test
+  label: Enter number.
+  scale: number
+  study: testsuite
+  uni:
+  - by: 19.0
+    density:
+    - 4
+    - 2
+    - 0
+    - 1
+    - 1
+    max: 100
+    min: 5
+    missing: 0
+    missings:
+      frequencies:
+      - 0
+      - 0
+      - 0
+      labels:
+      - keine Angabe
+      - trifft nicht zu
+      - nicht valide
+      values:
+      - -1
+      - -2
+      - -3
+      weighted:
+      - 0
+      - 0
+      - 0
+    total: 9
+    valid: 8
+    weighted:
+    - 4
+    - 2
+    - 0
+    - 1
+    - 1
+  variable: c1
