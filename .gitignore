@@ -1,4 +1,6 @@
 *.dta
+output/*
+!output/.gitkeep
 
 *~
 *.csv#

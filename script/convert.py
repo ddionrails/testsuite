@@ -9,7 +9,9 @@ def get_names (name):
     return data_name, data_folder
 
 def save_yaml(data_yaml, data_folder, format, stat, config):
-
+    """
+    Save YAML to file.
+    """
     print("write \"" + data_yaml + "\" in \"output/" + data_folder + "\"")
     with open("".join((config["output"], data_folder, format, data_yaml)), "w") as yaml_file:
       yaml_file.write(yaml.dump(stat, default_flow_style=False))
