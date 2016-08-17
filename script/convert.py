@@ -22,6 +22,11 @@ def save_json(data_json, data_folder, format, stat, config):
     with open("".join((config["output"], data_folder, format, data_json)), "w") as json_file:
       json_file.write(json.dumps(stat, data_json))
 
+def vistest(stat, config):
+    print("write test.json in vistest/")
+    with open("".join((config["vistest"], "test.json")), "w") as json_file:
+      json_file.write(json.dumps(stat, "test.json"))
+
 def parse_dataset(name, file_csv, file_json, config):
 
     data_name, data_folder = get_names(name)
@@ -29,7 +34,7 @@ def parse_dataset(name, file_csv, file_json, config):
     print("create folder \"output/" + data_folder + "\"")
     os.mkdir("".join((config["output"], data_folder)))
 
-    stat = generate_stat(data_name, file_csv, file_json)
+    stat = generate_stat(data_name, file_csv, file_json, config)
 
     format = "statistics_"
     
@@ -43,7 +48,7 @@ def parse_dataset(name, file_csv, file_json, config):
 
 def uni(elem, scale, file_csv, file_json):
 
-    statistics = []
+    statistics = {}
  
     #create df without missings    
     df_nomis = file_csv[elem["name"]].copy()
@@ -99,7 +104,7 @@ def uni(elem, scale, file_csv, file_json):
                     count += 1
             frequencies.append(count)
         '''
-        statistics.append(
+        statistics.update(
             dict(
                 frequencies = frequencies,
                 weighted = weighted,
@@ -114,7 +119,7 @@ def uni(elem, scale, file_csv, file_json):
         frequencies = []
         missings = []
 
-        statistics.append(
+        statistics.update(
             dict(
                 frequencies = frequencies,
                 missings = missings,
@@ -221,7 +226,7 @@ def uni(elem, scale, file_csv, file_json):
         total = int(file_csv[elem["name"]].size)
         valid = total - int(file_csv[elem["name"]].isnull().sum())
 
-        statistics.append(
+        statistics.update(
             dict(
                 density = density,
                 weighted = weighted,
@@ -239,13 +244,13 @@ def uni(elem, scale, file_csv, file_json):
     return statistics
 
 
-def generate_stat(data_name, file_csv, file_json):
+def generate_stat(data_name, file_csv, file_json, config):
     dataset_name = re.sub(".csv", "", data_name)
       
   
     stat = []
     for i, elem in enumerate(file_json["resources"][0]["schema"]["fields"]):
-        scale = elem["type"]
+        scale = elem["type"][0:3]
         stat.append(
             dict(
                 study = "testsuite",
@@ -256,6 +261,9 @@ def generate_stat(data_name, file_csv, file_json):
                 uni = uni(elem, scale, file_csv, file_json),
             )
         )
+        # Test for Visualization
+        if elem["name"] == "c1":
+            vistest(stat[-1], config)
 
     return stat
 
