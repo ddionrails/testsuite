@@ -72,8 +72,11 @@ def uni(elem, scale, file_csv, file_json):
     except:
         pass
 
-    # weighted
-    weighted = []
+    # missings
+    missing_count = df_mis.value_counts() 
+    missing_index = [0,1,2]
+    missing_value = [-3,-2,-1]
+    missing_label = ["nicht valide", "trifft nicht zu", "keine Angabe"]
    
     if elem["type"] == "cat":
         
@@ -83,11 +86,6 @@ def uni(elem, scale, file_csv, file_json):
         missings = []
         labels = []
             
-        # loop for missing codes
-        missing_count = df_mis.value_counts() 
-        missing_index = [0,1,2]
-        missing_value = [-3,-2,-1]
-        missing_label = ["nicht valide", "trifft nicht zu", "keine Angabe"]
         for index in missing_index:
             try:
                 frequencies.append(int(missing_count[missing_value[index]]))
@@ -126,15 +124,32 @@ def uni(elem, scale, file_csv, file_json):
         frequencies = []
         missings = []
 
+        len_unique = len(df_nomis.unique())
+        len_missing = 0
+        for i in df_nomis.unique():
+            if "-1" in str(i):
+                len_unique-=1
+                len_missing+=1
+            elif "-2" in str(i):
+                len_unique-=1
+                len_missing+=1
+            elif "-3" in str(i):
+                len_unique-=1
+                len_missing+=1
+            elif "nan" in str(i):
+                len_unique-=1
+                len_missing+=1
+        frequencies.append(len_unique)
+        missings.append(len_missing)
+
         statistics.update(
             dict(
                 frequencies = frequencies,
-                missings = missings,
+                missings = missings, #includes system missings
             )
         )
 
-    #number
-    else:  
+    elif elem["type"] == "number": 
         #missings        
         missings = dict()
         missings["frequencies"] = []
@@ -146,61 +161,18 @@ def uni(elem, scale, file_csv, file_json):
         total = []
         valid = []
         missing = []
+        weighted = []
 
-        #missings
-        '''
-        [-1] keine Angabe 
-        [-2] trifft nicht zu 
-        [-3] nicht valide
-        [<(-4)] undefiniert
-        '''
-        count_missing = 0
-        count_nv = 0
-        count_tnz = 0
-        count_kA = 0
-        count_ud = 0
-        for index, value in enumerate(df_mis):
-            if value == -1:
-                count_kA += 1
-                count_missing += 1
-            elif value == -2:
-                count_tnz += 1
-                count_missing += 1
-            elif value == -3:
-                count_nv += 1
-                count_missing += 1
-            elif value < -3:
-                count_ud += 1
-                count_missing += 1
-            missing = count_missing
-            nv = count_nv
-            tnz = count_tnz
-            kA = count_kA
-            ud = count_ud
+        for index in missing_index:
+            try:
+                missings["frequencies"].append(int(missing_count[missing_value[index]]))
+            except:
+                missings["frequencies"].append(0)
+            missings["labels"].append(missing_label[index])  
+            missings["values"].append(missing_value[index])
 
-        # missing frequencies
-        missings["frequencies"].append(kA)
-        missings["frequencies"].append(tnz)
-        missings["frequencies"].append(nv)
-        # missings["frequencies"].append(ud)
-
-        # missing labels
-        missings["labels"].append("keine Angabe")
-        missings["labels"].append("trifft nicht zu")
-        missings["labels"].append("nicht valide")
-        # missings["labels"].append("undefiniert")
-
-        # missing values
-        missings["values"].append(-1)
-        missings["values"].append(-2)
-        missings["values"].append(-3)
-        # missings["values"].append("<-4")
-
-        # missing weighted = missing frequencies (placeholder)
-        missings["weighted"].append(kA)
-        missings["weighted"].append(tnz)
-        missings["weighted"].append(nv)
-        # missings["weighted"].append(ud)
+        # weighted placeholder
+        missings["weighted"] = missings["frequencies"][:]
 
         # density and weighted (placeholder)
         if max - min > 0:
