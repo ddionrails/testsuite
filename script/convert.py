@@ -47,10 +47,14 @@ def parse_dataset(name, file_csv, file_json, config):
     data_json = re.sub(".csv", ".json", data_name) 
     save_json(data_json, data_folder, format, stat, config)
 
-def uni(elem, scale, file_csv, file_json):
+def get_missing_codes():
+    missing_index = [0,1,2]
+    missing_value = [-3,-2,-1]
+    missing_label = ["nicht valide", "trifft nicht zu", "keine Angabe"]
 
-    statistics = {}
- 
+    return missing_index, missing_value, missing_label
+
+def get_dataframes(elem, file_csv):
     #create df without missings    
     df_nomis = file_csv[elem["name"]].copy()
 
@@ -65,58 +69,77 @@ def uni(elem, scale, file_csv, file_json):
         if isinstance(value, str)==False and value >= 0:
             df_mis[index] = np.nan
 
+    return df_nomis, df_mis
+
+def uni_cat(elem, file_csv):
+    df_nomis, df_mis = get_dataframes(elem, file_csv)
+    
+    # missings
+    missing_index, missing_value, missing_label = get_missing_codes()
+    missing_count = df_mis.value_counts() 
+
+    frequencies = []
+    weighted = []
+    values = []
+    missings = []
+    labels = []
+            
+    for index in missing_index:
+        try:
+            frequencies.append(int(missing_count[missing_value[index]]))
+        except:
+            frequencies.append(0)
+        labels.append(missing_label[index])
+        missings.append("true")  
+        values.append(missing_value[index])
+
+    # loop for value codes
+    value_count = df_nomis.value_counts()
+    for index, value in enumerate(elem["values"]):
+        try:
+            frequencies.append(int(value_count[value["value"]]))
+        except:
+            frequencies.append(0)
+        labels.append(value["label"])
+        missings.append("false") 
+        values.append(value["value"]) 
+
+    # weighted placeholder
+    weighted = frequencies[:]
+
+    cat_dict = dict(
+        frequencies = frequencies,
+        weighted = weighted,
+        values = values,
+        missings = missings,
+        labels = labels,
+        )
+
+    return cat_dict
+
+def uni(elem, scale, file_csv, file_json):
+
+    statistics = {}
+
+    df_nomis, df_mis = get_dataframes(elem, file_csv)   
+
+    # missings
+    missing_index, missing_value, missing_label = get_missing_codes()
+    missing_count = df_mis.value_counts()  
+
     # min and max
     try:
         min = int(df_nomis.min())
         max = int(df_nomis.max())
     except:
         pass
-
-    # missings
-    missing_count = df_mis.value_counts() 
-    missing_index = [0,1,2]
-    missing_value = [-3,-2,-1]
-    missing_label = ["nicht valide", "trifft nicht zu", "keine Angabe"]
    
     if elem["type"] == "cat":
         
-        frequencies = []
-        weighted = []
-        values = []
-        missings = []
-        labels = []
-            
-        for index in missing_index:
-            try:
-                frequencies.append(int(missing_count[missing_value[index]]))
-            except:
-                frequencies.append(0)
-            labels.append(missing_label[index])
-            missings.append("true")  
-            values.append(missing_value[index])
-
-        # loop for value codes
-        value_count = df_nomis.value_counts()
-        for index, value in enumerate(elem["values"]):
-            try:
-                frequencies.append(int(value_count[value["value"]]))
-            except:
-                frequencies.append(0)
-            labels.append(value["label"])
-            missings.append("false") 
-            values.append(value["value"]) 
-
-        # weighted placeholder
-        weighted = frequencies[:]
+        cat_dict = uni_cat(elem, file_csv)
 
         statistics.update(
-            dict(
-                frequencies = frequencies,
-                weighted = weighted,
-                values = values,
-                missings = missings,
-                labels = labels,
-            )
+            cat_dict
         )
 
     elif elem["type"] == "string":
