@@ -22,10 +22,11 @@ def save_json(data_json, data_folder, format, stat, config):
     with open("".join((config["output"], data_folder, format, data_json)), "w") as json_file:
       json_file.write(json.dumps(stat, data_json))
 
-def vistest(stat, config):
-    print("write test.json in vistest/")
-    with open("".join((config["vistest"], "test.json")), "w") as json_file:
-      json_file.write(json.dumps(stat, "test.json"))
+def vistest(stat, dataset_name, var_name, config):
+    vistest_name = "".join((dataset_name, "_", var_name, ".json"))
+    print("write \"" + vistest_name + "\" in \"vistest/output/\"")
+    with open("".join((config["vistest"], vistest_name)), "w") as json_file:
+      json_file.write(json.dumps(stat, vistest_name))
 
 def parse_dataset(name, file_csv, file_json, config):
 
@@ -82,28 +83,34 @@ def uni(elem, scale, file_csv, file_json):
         missings = []
         labels = []
             
+        # loop for missing codes
+        missing_count = df_mis.value_counts() 
+        missing_index = [0,1,2]
+        missing_value = [-3,-2,-1]
+        missing_label = ["nicht valide", "trifft nicht zu", "keine Angabe"]
+        for index in missing_index:
+            try:
+                frequencies.append(int(missing_count[missing_value[index]]))
+            except:
+                frequencies.append(0)
+            labels.append(missing_label[index])
+            missings.append("true")  
+            values.append(missing_value[index])
 
-        '''
+        # loop for value codes
+        value_count = df_nomis.value_counts()
+        for index, value in enumerate(elem["values"]):
+            try:
+                frequencies.append(int(value_count[value["value"]]))
+            except:
+                frequencies.append(0)
+            labels.append(value["label"])
+            missings.append("false") 
+            values.append(value["value"]) 
 
-        for v,l in value_labels.items():
-            if v == 4294967293:
-                v = -3
-            if v == 4294967294:
-                v = -2
-            if v == 4294967295:
-                v = -1
-            values.append(v)
-            labels.append(l)
-            if v<0:
-                missings.append("true")
-            else:
-                missings.append("false")
-            count = 0
-            for index, value in enumerate(df_data[var["name"]]):
-                if value == v:
-                    count += 1
-            frequencies.append(count)
-        '''
+        # weighted placeholder
+        weighted = frequencies[:]
+
         statistics.update(
             dict(
                 frequencies = frequencies,
@@ -251,6 +258,7 @@ def generate_stat(data_name, file_csv, file_json, config):
     stat = []
     for i, elem in enumerate(file_json["resources"][0]["schema"]["fields"]):
         scale = elem["type"][0:3]
+        var_name = elem["name"]
         stat.append(
             dict(
                 study = "testsuite",
@@ -262,8 +270,7 @@ def generate_stat(data_name, file_csv, file_json, config):
             )
         )
         # Test for Visualization
-        if elem["name"] == "c1":
-            vistest(stat[-1], config)
+        vistest(stat[-1], dataset_name, var_name, config)
 
     return stat
 
@@ -272,8 +279,4 @@ def main(config, data_csv, data_json):
         path_json = re.sub(".csv", ".json", name)
         file_json = data_json[path_json]
         file_csv = data
-        '''
-        for i, elem in enumerate(file_json["resources"][0]["schema"]["fields"]):
-          print(elem["type"])
-        '''
         parse_dataset(name, file_csv, file_json, config)

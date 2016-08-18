@@ -3,6 +3,6 @@ config = dict(
     input_json = "./input/*.json",
     output = "./output/",
     metadata = "./metadata/",
-    vistest = "./vistest/",
+    vistest = "./vistest/output/",
     docs = "./docs/",
 )
