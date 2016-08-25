@@ -244,9 +244,8 @@ def uni(elem, scale, file_csv, file_json):
 
     return statistics
 
-def bi(base, elem, scale, file_csv, file_json):
+def bi(base, elem, scale, file_csv, file_json, split="split")
     # split variable for bi-variate analysis
-    split = "split"
     categories = dict()
 
     for j, temp in enumerate(file_json["resources"][0]["schema"]["fields"]):
