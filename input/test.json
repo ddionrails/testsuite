@@ -25,6 +25,20 @@
             "name": "c1",
             "label": "Enter number.",
             "type": "number"
+          },
+          {
+            "name": "split",
+            "label": "split",
+            "type": "cat",
+            "values": [
+              {"value": 0, "label": "Nein"},
+              {"value": 1, "label": "Ja"}
+            ]
+          },
+          {
+            "name": "weight",
+            "label": "weight",
+            "type": "number"
           }
         ]
       }
