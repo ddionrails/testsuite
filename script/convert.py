@@ -138,11 +138,12 @@ def uni_number(elem, file_csv):
     missing_count = df_mis.value_counts()
 
     #missings        
-    missings = dict()
-    missings["frequencies"] = []
-    missings["weighted"] = []
-    missings["labels"] = []
-    missings["values"] = []
+    missings = dict(
+        frequencies=[],
+        weighted=[],
+        labels=[],
+        values=[],
+    )
             
     density = []
     total = []
@@ -250,27 +251,23 @@ def bi(base, elem, scale, file_csv, file_json):
 
     for j, temp in enumerate(file_json["resources"][0]["schema"]["fields"]):
         if temp["name"] == split:
+            bi = dict()
+            bi[split] = dict()
             for index, value in enumerate(temp["values"]):
+                v = value["value"]
                 temp_csv = file_csv.copy()
                 for row in temp_csv.iterrows():
-                    if temp_csv[split][row[0]] != value["value"]:
+                    if temp_csv[split][row[0]] != v:
                         temp_csv[base][row[0]] = np.nan
-                categories[value["value"]] = uni(elem, scale, temp_csv, file_json)
-                categories[value["value"]]["label"] = temp["values"][index]["label"]
-                values = categories[value["value"]]["values"]
-                del categories[value["value"]]["values"]
-                missings = categories[value["value"]]["missings"]
-                del categories[value["value"]]["missings"]
-                labels = categories[value["value"]]["labels"]
-                del categories[value["value"]]["labels"]
-            bi = dict()
-            bi[split] = dict(
+                categories[v] = uni(elem, scale, temp_csv, file_json)
+                categories[v]["label"] = temp["values"][index]["label"]
+                for i in ["values", "missings", "labels"]:
+                    bi[split][i] = categories[v][i]
+                    del categories[v][i]
+            bi[split].update(dict(
                 label = temp["label"],
                 categories = categories,
-                values = values,
-                missings = missings,
-                labels = labels,
-                )
+            ))
 
 
     return bi
