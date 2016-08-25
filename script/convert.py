@@ -28,25 +28,6 @@ def vistest(stat, dataset_name, var_name, config):
     with open("".join((config["vistest"], vistest_name)), "w") as json_file:
       json_file.write(json.dumps(stat, vistest_name))
 
-def parse_dataset(name, file_csv, file_json, config):
-
-    data_name, data_folder = get_names(name)
-
-    print("create folder \"output/" + data_folder + "\"")
-    os.mkdir("".join((config["output"], data_folder)))
-
-    stat = generate_stat(data_name, file_csv, file_json, config)
-
-    format = "statistics_"
-    
-    # yaml name
-    data_yaml = re.sub(".csv", ".yaml", data_name) 
-    save_yaml(data_yaml, data_folder, format, stat, config)
-
-    # json name
-    data_json = re.sub(".csv", ".json", data_name) 
-    save_json(data_json, data_folder, format, stat, config)
-
 def get_missing_codes():
     missing_index = [0,1,2]
     missing_value = [-3,-2,-1]
@@ -117,15 +98,57 @@ def uni_cat(elem, file_csv):
 
     return cat_dict
 
-def uni(elem, scale, file_csv, file_json):
+def uni_string(elem, file_csv):
+    df_nomis, df_mis = get_dataframes(elem, file_csv)
 
-    statistics = {}
+    frequencies = []
+    missings = []
 
-    df_nomis, df_mis = get_dataframes(elem, file_csv)   
+    len_unique = len(df_nomis.unique())
+    len_missing = 0
+    for i in df_nomis.unique():
+        if "-1" in str(i):
+            len_unique-=1
+            len_missing+=1
+        elif "-2" in str(i):
+            len_unique-=1
+            len_missing+=1
+        elif "-3" in str(i):
+            len_unique-=1
+            len_missing+=1
+        elif "nan" in str(i):
+            len_unique-=1
+            len_missing+=1
+    frequencies.append(len_unique)
+    missings.append(len_missing)
+
+
+    string_dict = dict(
+        frequencies = frequencies,
+        missings = missings, #includes system missings
+        )
+
+    return string_dict
+
+def uni_number(elem, file_csv):
+    df_nomis, df_mis = get_dataframes(elem, file_csv)
 
     # missings
     missing_index, missing_value, missing_label = get_missing_codes()
-    missing_count = df_mis.value_counts()  
+    missing_count = df_mis.value_counts()
+
+    #missings        
+    missings = dict()
+    missings["frequencies"] = []
+    missings["weighted"] = []
+    missings["labels"] = []
+    missings["values"] = []
+            
+    density = []
+    total = []
+    valid = []
+    missing = []
+    weighted = []
 
     # min and max
     try:
@@ -133,6 +156,66 @@ def uni(elem, scale, file_csv, file_json):
         max = int(df_nomis.max())
     except:
         pass
+
+    for index in missing_index:
+        try:
+            missings["frequencies"].append(int(missing_count[missing_value[index]]))
+        except:
+            missings["frequencies"].append(0)
+        missings["labels"].append(missing_label[index])  
+        missings["values"].append(missing_value[index])
+
+    # weighted placeholder
+    missings["weighted"] = missings["frequencies"][:]
+
+    # density and weighted (placeholder)
+    if max - min > 0:
+        by = (max-min)/5
+        x = min
+        while(x < max):
+            count = 0
+            y = x + by
+                
+            for index, value in enumerate(df_nomis):
+                if value >= x and value < y:
+                    count += 1
+                elif round(y) == max and value == max:
+                    count += 1
+            x = y
+                
+            density.append(count)
+            weighted.append(count)
+
+    else:
+        by = 0
+        count = 0
+        for index, value in enumerate(df_nomis):
+            if value >= 0:
+                count += 1
+                density.append(count)
+                weighted.append(count)
+       
+    # total and valid
+    total = int(file_csv[elem["name"]].size)
+    valid = total - int(file_csv[elem["name"]].isnull().sum())
+
+    number_dict = dict(
+        density = density,
+        weighted = weighted,
+        min = min,
+        max = max,
+        by = by,
+        total = total,
+        valid = valid,
+        missing = missing,
+        missings = missings,
+        )
+
+    return number_dict
+
+def uni(elem, scale, file_csv, file_json):
+
+    statistics = {}
    
     if elem["type"] == "cat":
         
@@ -144,130 +227,103 @@ def uni(elem, scale, file_csv, file_json):
 
     elif elem["type"] == "string":
 
-        frequencies = []
-        missings = []
-
-        len_unique = len(df_nomis.unique())
-        len_missing = 0
-        for i in df_nomis.unique():
-            if "-1" in str(i):
-                len_unique-=1
-                len_missing+=1
-            elif "-2" in str(i):
-                len_unique-=1
-                len_missing+=1
-            elif "-3" in str(i):
-                len_unique-=1
-                len_missing+=1
-            elif "nan" in str(i):
-                len_unique-=1
-                len_missing+=1
-        frequencies.append(len_unique)
-        missings.append(len_missing)
+        string_dict = uni_string(elem, file_csv)
 
         statistics.update(
-            dict(
-                frequencies = frequencies,
-                missings = missings, #includes system missings
-            )
+            string_dict
         )
 
     elif elem["type"] == "number": 
-        #missings        
-        missings = dict()
-        missings["frequencies"] = []
-        missings["weighted"] = []
-        missings["labels"] = []
-        missings["values"] = []
-            
-        density = []
-        total = []
-        valid = []
-        missing = []
-        weighted = []
 
-        for index in missing_index:
-            try:
-                missings["frequencies"].append(int(missing_count[missing_value[index]]))
-            except:
-                missings["frequencies"].append(0)
-            missings["labels"].append(missing_label[index])  
-            missings["values"].append(missing_value[index])
-
-        # weighted placeholder
-        missings["weighted"] = missings["frequencies"][:]
-
-        # density and weighted (placeholder)
-        if max - min > 0:
-            by = (max-min)/5
-            x = min
-            while(x < max):
-                count = 0
-                y = x + by
-                
-                for index, value in enumerate(df_nomis):
-                    if value >= x and value < y:
-                        count += 1
-                    elif round(y) == max and value == max:
-                        count += 1
-                x = y
-                
-                density.append(count)
-                weighted.append(count)
-
-        else:
-            by = 0
-            count = 0
-            for index, value in enumerate(df_nomis):
-                if value >= 0:
-                    count += 1
-                    density.append(count)
-                    weighted.append(count)
-        
-        # total and valid
-        total = int(file_csv[elem["name"]].size)
-        valid = total - int(file_csv[elem["name"]].isnull().sum())
+        number_dict = uni_number(elem, file_csv)
 
         statistics.update(
-            dict(
-                density = density,
-                weighted = weighted,
-                min = min,
-                max = max,
-                by = by,
-                total = total,
-                valid = valid,
-                missing = missing,
-                missings = missings,
-            )
+            number_dict
         )
-
 
     return statistics
 
+def bi(base, elem, scale, file_csv, file_json):
+    # split variable for bi-variate analysis
+    split = "split"
+    categories = dict()
+
+    for j, temp in enumerate(file_json["resources"][0]["schema"]["fields"]):
+        if temp["name"] == split:
+            for index, value in enumerate(temp["values"]):
+                temp_csv = file_csv.copy()
+                for row in temp_csv.iterrows():
+                    if temp_csv[split][row[0]] != value["value"]:
+                        temp_csv[base][row[0]] = np.nan
+                categories[value["value"]] = uni(elem, scale, temp_csv, file_json)
+                categories[value["value"]]["label"] = temp["values"][index]["label"]
+                values = categories[value["value"]]["values"]
+                del categories[value["value"]]["values"]
+                missings = categories[value["value"]]["missings"]
+                del categories[value["value"]]["missings"]
+                labels = categories[value["value"]]["labels"]
+                del categories[value["value"]]["labels"]
+            bi = dict()
+            bi[split] = dict(
+                label = temp["label"],
+                categories = categories,
+                values = values,
+                missings = missings,
+                labels = labels,
+                )
+
+
+    return bi
+
+def stat_dict(dataset_name, elem, file_csv, file_json):
+    scale = elem["type"][0:3]
+
+    # base variable for bi-variate analysis
+    base = "a1"
+
+    stat_dict = dict(
+        study = "testsuite",
+        dataset = dataset_name,
+        variable = elem["name"],
+        label = elem["label"],
+        scale = scale,
+        uni = uni(elem, scale, file_csv, file_json),
+        )
+    if elem["name"] == base:
+        stat_dict["bi"] = bi(base, elem, scale, file_csv, file_json)
+    return stat_dict
 
 def generate_stat(data_name, file_csv, file_json, config):
     dataset_name = re.sub(".csv", "", data_name)
       
-  
     stat = []
     for i, elem in enumerate(file_json["resources"][0]["schema"]["fields"]):
-        scale = elem["type"][0:3]
-        var_name = elem["name"]
         stat.append(
-            dict(
-                study = "testsuite",
-                dataset = dataset_name,
-                variable = elem["name"],
-                label = elem["label"],
-                scale = scale,
-                uni = uni(elem, scale, file_csv, file_json),
-            )
+            stat_dict(dataset_name, elem, file_csv, file_json)
         )
         # Test for Visualization
-        vistest(stat[-1], dataset_name, var_name, config)
+        vistest(stat[-1], dataset_name, elem["name"], config)
 
     return stat
+
+def parse_dataset(name, file_csv, file_json, config):
+
+    data_name, data_folder = get_names(name)
+
+    print("create folder \"output/" + data_folder + "\"")
+    os.mkdir("".join((config["output"], data_folder)))
+
+    stat = generate_stat(data_name, file_csv, file_json, config)
+
+    format = "statistics_"
+    
+    # yaml name
+    data_yaml = re.sub(".csv", ".yaml", data_name) 
+    save_yaml(data_yaml, data_folder, format, stat, config)
+
+    # json name
+    data_json = re.sub(".csv", ".json", data_name) 
+    save_json(data_json, data_folder, format, stat, config)
 
 def main(config, data_csv, data_json):
     for name, data in data_csv.items():
