@@ -64,12 +64,17 @@ def uni_cat(elem, file_csv):
     values = []
     missings = []
     labels = []
-            
+     
+    # weighted frequencies
+    f_w = file_csv.pivot_table(index=elem["name"], values="weight", aggfunc=np.sum)
+       
     for index in missing_index:
         try:
             frequencies.append(int(missing_count[missing_value[index]]))
+            weighted.append(int(f_w[missing_value[index]]))
         except:
             frequencies.append(0)
+            weighted.append(0)
         labels.append(missing_label[index])
         missings.append("true")  
         values.append(missing_value[index])
@@ -81,12 +86,13 @@ def uni_cat(elem, file_csv):
             frequencies.append(int(value_count[value["value"]]))
         except:
             frequencies.append(0)
+        try:
+            weighted.append(int(f_w[value["value"]]))
+        except:
+            weighted.append(0)
         labels.append(value["label"])
         missings.append("false") 
         values.append(value["value"]) 
-
-    # weighted placeholder
-    weighted = frequencies[:]
 
     cat_dict = dict(
         frequencies = frequencies,
@@ -158,18 +164,27 @@ def uni_number(elem, file_csv):
     except:
         pass
 
+    # weighted missings
+    if elem["name"] != "weight":
+        f_w = file_csv.pivot_table(index=elem["name"], values="weight", aggfunc=np.sum)
+
     for index in missing_index:
         try:
             missings["frequencies"].append(int(missing_count[missing_value[index]]))
         except:
             missings["frequencies"].append(0)
+        try:
+            missings["weighted"].append(int(f_w[missing_value[index]]))
+        except:
+            missings["weighted"].append(0)
         missings["labels"].append(missing_label[index])  
         missings["values"].append(missing_value[index])
+    missing.append(sum(missings["frequencies"]))
 
-    # weighted placeholder
-    missings["weighted"] = missings["frequencies"][:]
+    if elem["name"] == "weight":
+        missings["weighted"] = missings["frequencies"][:]
 
-    # density and weighted (placeholder)
+    # density (placeholder)
     if max - min > 0:
         by = (max-min)/5
         x = min
@@ -185,7 +200,6 @@ def uni_number(elem, file_csv):
             x = y
                 
             density.append(count)
-            weighted.append(count)
 
     else:
         by = 0
@@ -194,7 +208,16 @@ def uni_number(elem, file_csv):
             if value >= 0:
                 count += 1
                 density.append(count)
-                weighted.append(count)
+
+    # weighted placeholder
+    weighted = density[:]
+    
+    # tranform to percentage
+    '''
+    x = sum(density)
+    for i, c in enumerate(density):
+        density[i] = density[i]/x
+    '''
        
     # total and valid
     total = int(file_csv[elem["name"]].size)
@@ -244,26 +267,37 @@ def uni(elem, scale, file_csv, file_json):
 
     return statistics
 
-def bi(base, elem, scale, file_csv, file_json, split="split")
+def bi(base, elem, scale, file_csv, file_json, split=["split"]):
     # split variable for bi-variate analysis
     categories = dict()
 
     for j, temp in enumerate(file_json["resources"][0]["schema"]["fields"]):
-        if temp["name"] == split:
+        if temp["name"] in split:
+            s = temp["name"]
             bi = dict()
-            bi[split] = dict()
+            bi[s] = dict()
             for index, value in enumerate(temp["values"]):
                 v = value["value"]
                 temp_csv = file_csv.copy()
                 for row in temp_csv.iterrows():
-                    if temp_csv[split][row[0]] != v:
+                    if temp_csv[s][row[0]] != v:
                         temp_csv[base][row[0]] = np.nan
                 categories[v] = uni(elem, scale, temp_csv, file_json)
                 categories[v]["label"] = temp["values"][index]["label"]
-                for i in ["values", "missings", "labels"]:
-                    bi[split][i] = categories[v][i]
-                    del categories[v][i]
-            bi[split].update(dict(
+
+                if elem["type"] == "cat":
+                    uni_source = uni(elem, scale, file_csv, file_json)
+                    for i in ["values", "missings", "labels"]:
+                        bi[s][i] = uni_source[i]
+                        del categories[v][i]
+
+                elif elem["type"] == "number":
+                    uni_source = uni(elem, scale, file_csv, file_json)
+                    for i in ["min", "max", "by"]:
+                        bi[s][i] = uni_source[i]
+                        del categories[v][i]
+
+            bi[s].update(dict(
                 label = temp["label"],
                 categories = categories,
             ))
@@ -271,11 +305,10 @@ def bi(base, elem, scale, file_csv, file_json, split="split")
 
     return bi
 
-def stat_dict(dataset_name, elem, file_csv, file_json):
+def stat_dict(dataset_name, elem, file_csv, file_json, base = ["a1", "c1"]):
     scale = elem["type"][0:3]
 
     # base variable for bi-variate analysis
-    base = "a1"
 
     stat_dict = dict(
         study = "testsuite",
@@ -285,8 +318,8 @@ def stat_dict(dataset_name, elem, file_csv, file_json):
         scale = scale,
         uni = uni(elem, scale, file_csv, file_json),
         )
-    if elem["name"] == base:
-        stat_dict["bi"] = bi(base, elem, scale, file_csv, file_json)
+    if elem["name"] in base:
+        stat_dict["bi"] = bi(elem["name"], elem, scale, file_csv, file_json)
     return stat_dict
 
 def generate_stat(data_name, file_csv, file_json, config):
