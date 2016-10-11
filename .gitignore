@@ -1,8 +1,7 @@
 *.dta
 output/*
 !output/.gitkeep
-vistest/output/*
-!vistest/output/.gitkeep
+input/temp/
 
 vistest/test.json
 
