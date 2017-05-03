@@ -1,9 +1,16 @@
 *.dta
-output/*
-!output/.gitkeep
-input/temp/
+02-data-processing/input/*
+!02-data-processing/input/.gitkeep
+02-data-processing/output/*
+!02-data-processing/output/.gitkeep
 
-vistest/test.json
+03-generate-statistics/input/*
+!03-generate-statistics/input/.gitkeep
+03-generate-statistics/output/*
+!03-generate-statistics/output/.gitkeep
+
+old/
+
 
 *~
 *.csv#

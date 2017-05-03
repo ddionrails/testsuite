@@ -8,7 +8,7 @@
           {
             "name": "id",
             "label": "ID",
-            "type": "number",
+            "type": "number"
           },
           {
             "name": "wave",
