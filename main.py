@@ -1,9 +1,13 @@
-import os
+import os,sys, yaml
 os.system("./setup.sh")
 
-# The environment loads all packages (pd, np), the config, and the data
-from script.environment import *
+sys.path.append(os.path.abspath("../../ddi.py"))
+from ddi.dataset import Dataset
 
-d, m = read_tdp("input/test2.csv", "input/test2.json")
-write_stats(d, m, "output/test2.json", vistest="output/vistest/")
-write_stats(d, m, "output/test2.yaml", file_type="yaml")
+d1 = Dataset()
+# d1.read_stata("input/test3.dta")
+d1.read_tdp("input/test3.csv", "input/test3.json")
+d1.write_stats("output/test3_stats.json", split="split", weight="weight")
+d1.write_stats("output/test3_stats.html", file_type="html", split="split", weight="weight")
+d1.write_tdp("output/test3.csv", "output/test3.json")
+d1.write_stata("output/test3.do")
