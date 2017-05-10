@@ -1,0 +1,32 @@
+{
+  "resources": [
+    {
+      "path": "test.csv",
+      "schema": {
+        "fields": [
+          {
+            "type": "number",
+            "name": "id",
+            "label": "ID"
+          },
+          {
+            "type": "number",
+            "name": "wave",
+            "label": "wave"
+          },
+          {
+            "type": "number",
+            "name": "weight",
+            "label": "weight"
+          },
+          {
+            "type": "number",
+            "name": "bmi",
+            "label": "BMI"
+          }
+        ]
+      }
+    }
+  ],
+  "name": "test"
+}

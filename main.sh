@@ -1,3 +1,5 @@
 sh setup.sh
-python3 02-data-processing/main.py
-python3 03-generate-statistics/main.py
+sh 01-data-collection/main.sh
+sh 02-data-processing/main.sh
+sh 03-data-generation/main.sh
+sh 04-data-distribution/main.sh

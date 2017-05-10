@@ -1,4 +1,0 @@
-study_name,dataset_name,variable_name,concept_namespace,concept_name,instrument_name,question_name,item_name,primary_key,description,description_long,boost,basket_key,basket_is_default
-testsuite,test,a1,testsuite,a1,,1,,,,,,,
-testsuite,test,b1,testsuite,b1,,2,,,,,,,
-testsuite,test,c1,testsuite,c1,,3,,,,,,,
