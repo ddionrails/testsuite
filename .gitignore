@@ -9,7 +9,9 @@
 03-generate-statistics/output/*
 !03-generate-statistics/output/.gitkeep
 
-old/
+old
+output
+vistest
 
 
 *~
