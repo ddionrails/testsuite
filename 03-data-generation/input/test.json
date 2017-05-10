@@ -1,36 +1,36 @@
 {
   "resources": [
     {
-      "path": "test.csv",
       "schema": {
         "fields": [
           {
+            "label": "ID",
             "type": "number",
-            "name": "id",
-            "label": "ID"
+            "name": "id"
           },
           {
+            "label": "wave",
             "type": "number",
-            "name": "wave",
-            "label": "wave"
+            "name": "wave"
           },
           {
+            "label": "Body weight.",
             "type": "number",
-            "name": "body_weight",
-            "label": "Body weight."
+            "name": "body_weight"
           },
           {
+            "label": "Body height.",
             "type": "number",
-            "name": "body_height",
-            "label": "Body height."
+            "name": "body_height"
           },
           {
+            "label": "weight",
             "type": "number",
-            "name": "weight",
-            "label": "weight"
+            "name": "weight"
           }
         ]
-      }
+      },
+      "path": "test.csv"
     }
   ],
   "name": "test"

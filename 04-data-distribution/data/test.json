@@ -6,28 +6,28 @@
         "fields": [
           {
             "type": "number",
-            "name": "id",
-            "label": "ID"
+            "label": "ID",
+            "name": "id"
           },
           {
             "type": "number",
-            "name": "wave",
-            "label": "wave"
+            "label": "wave",
+            "name": "wave"
           },
           {
             "type": "number",
-            "name": "body_weight",
-            "label": "Body weight."
+            "label": "Body weight.",
+            "name": "body_weight"
           },
           {
             "type": "number",
-            "name": "body_height",
-            "label": "Body height."
+            "label": "Body height.",
+            "name": "body_height"
           },
           {
             "type": "number",
-            "name": "weight",
-            "label": "weight"
+            "label": "weight",
+            "name": "weight"
           }
         ]
       }
