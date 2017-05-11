@@ -1,19 +1,9 @@
 *.dta
-02-data-processing/input/*
-!02-data-processing/input/.gitkeep
-02-data-processing/output/*
-!02-data-processing/output/.gitkeep
-
-03-generate-statistics/input/*
-!03-generate-statistics/input/.gitkeep
-03-generate-statistics/output/*
-!03-generate-statistics/output/.gitkeep
 
 old
 output
 vistest
-01-temp
-02-temp
+*-temp
 
 *~
 *.csv#
