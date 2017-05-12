@@ -11,7 +11,8 @@ print(d1.dataset)
 print(d1.metadata)
 '''
 
-# test raw data
-# d1.test()
+# Import test
+sys.path.append('02-data-processing/test')
+import import_test
 
 d1.write_tdp("02-data-processing/input/test.csv", "02-data-processing/input/test.json")
