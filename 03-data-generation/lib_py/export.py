@@ -7,16 +7,18 @@ d1 = Dataset()
 
 d1.read_tdp("03-data-generation/output/test.csv", "03-data-generation/output/test.json")
 
-# test data
-# import export-test
+# Export test
+sys.path.append('03-data-generation/test')
+import export_test
 
 d1.write_tdp("03-temp/test.csv", "03-temp/test.json")
 # shutil.copy2("03-data-generation/output/test_stats.json", "03-temp/test_stats.json")
 
 d1.read_tdp("03-data-generation/output/test_gen.csv", "03-data-generation/output/test_gen.json")
 
-# test data
-# import export-test
+# Export test
+sys.path.append('03-data-generation/test')
+import export_test
 
 d1.write_tdp("03-temp/test_gen.csv", "03-temp/test_gen.json")
 # shutil.copy2("03-data-generation/output/test_gen_stats.json", "03-temp/test_gen_stats.json")
