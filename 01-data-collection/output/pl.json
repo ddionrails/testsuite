@@ -1,0 +1,62 @@
+{
+  "name": "pl",
+  "resources": [
+    {
+      "path": "pl.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "pid",
+            "label": "PID",
+            "type": "number"
+          },
+          {
+            "name": "wave",
+            "label": "wave",
+            "type": "number"
+          },
+          {
+            "name": "bodyweight",
+            "label": "Body weight.",
+            "type": "number"
+          },
+          {
+            "name": "bodyheight",
+            "label": "Body height.",
+            "type": "number"
+          },
+          {
+            "name": "weight",
+            "label": "weight",
+            "type": "number"
+          }
+          {
+            "name": "stat",
+            "label": "Relationship status.",
+            "type": "cat",
+            "values": [
+              {"value": 1, "label": "Single"},
+              {"value": 2, "label": "Married"},
+              {"value": 3, "label": "Divorced"},
+              {"value": 4, "label": "Widowed"}
+            ]
+          },
+          {
+            "name": "smo",
+            "label": "Smoking?",
+            "type": "cat",
+            "values": [
+              {"value": 1, "label": "Yes"},
+              {"value": 2, "label": "No"}
+            ]
+          },
+          {
+            "name": "text",
+            "label": "text",
+            "type": "string"
+          },
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "name": "hl",
+  "resources": [
+    {
+      "path": "hl.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "pid",
+            "label": "PID",
+            "type": "number"
+          },
+          {
+            "name": "hid",
+            "label": "HID",
+            "type": "number"
+          },
+          {
+            "name": "wave",
+            "label": "wave",
+            "type": "number"
+          },
+          {
+            "name": "income",
+            "label": "Household Net Income",
+            "type": "number"
+          },
+          {
+            "name": "neighbor",
+            "label": "Neighborhood Of Household",
+            "type": "cat",
+            "values": [
+              {"value": 1, "label": "Res. Area Old"},
+              {"value": 2, "label": "Res. Area New"},
+              {"value": 3, "label": "Mixed Resid., Comm. Area"},
+              {"value": 4, "label": "Commercial Area"},
+              {"value": 5, "label": "Industrial Area"}
+            ]
+          },
+          {
+            "name": "text",
+            "label": "text",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ]
+}
