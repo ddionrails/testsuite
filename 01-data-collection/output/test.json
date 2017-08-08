@@ -13,6 +13,7 @@
           {
             "name": "wave",
             "label": "wave",
+            "label_de": "Welle",
             "type": "number"
           },
           {
