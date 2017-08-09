@@ -3,12 +3,30 @@ import os,sys
 sys.path.append(os.path.abspath("../ddi.py"))
 from ddi.dataset import Dataset
 
-d1 = Dataset()
+def export(dataset, format, testscript):
 
-d1.read_tdp("01-data-collection/output/test.csv", "01-data-collection/output/test.json")
+    d1 = Dataset()
 
-# Export test
-sys.path.append('01-data-collection/test')
-import export_test
+    if format == "tdp":
+        d1.read_tdp(
+            "01-data-collection/output/" + dataset + ".csv", 
+            "01-data-collection/output/" + dataset + ".json"
+        )
+        
+    elif format == "stata":
+        d1.read_stata(
+            "01-data-collection/output/" + dataset + ".dta"
+        )
+    
+    else:
+        print("[ERROR]: Wrong format: %s for %s" % (format, dataset))
 
-d1.write_tdp("01-temp/test.csv", "01-temp/test.json")
+    # Export test
+    if testscript != "":
+        sys.path.append('01-data-collection/test')
+        import export_test
+
+    d1.write_tdp(
+        "01-temp/" + dataset + ".csv", 
+        "01-temp/" + dataset + ".json"
+    )

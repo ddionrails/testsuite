@@ -29,7 +29,7 @@
             "name": "weight",
             "label": "weight",
             "type": "number"
-          }
+          },
           {
             "name": "stat",
             "label": "Relationship status.",
@@ -54,7 +54,7 @@
             "name": "text",
             "label": "text",
             "type": "string"
-          },
+          }
         ]
       }
     }
