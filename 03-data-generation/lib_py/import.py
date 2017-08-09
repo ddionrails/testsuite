@@ -13,6 +13,7 @@ print(d1.metadata)
 # Import test
 sys.path.append('03-data-generation/test')
 import import_test
+# d1.test("import_test.yaml")
 
 
 d1.write_tdp("03-data-generation/input/test.csv", "03-data-generation/input/test.json")
