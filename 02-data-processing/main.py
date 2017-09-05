@@ -3,9 +3,7 @@ import pandas as pd
 import numpy as np
 import os, sys, csv
 
-from lib_py.import_data import import_data
-from lib_py.process import process
-from lib_py.export_data import export_data
+from lib_py.processing import *
 
 metadata = pd.read_csv("./metadata.csv", delimiter=",", header = 0)
 

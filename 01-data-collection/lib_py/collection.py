@@ -12,7 +12,7 @@ def export_data(dataset, format, testscript):
             "01-data-collection/output/" + dataset + ".csv", 
             "01-data-collection/output/" + dataset + ".json"
         )
-        
+    
     elif format == "stata":
         d1.read_stata(
             "01-data-collection/output/" + dataset + ".dta"
@@ -30,3 +30,9 @@ def export_data(dataset, format, testscript):
         "01-temp/" + dataset + ".csv", 
         "01-temp/" + dataset + ".json"
     )
+
+def main():
+    pass  
+    
+if __name__ == "__main__":
+    main()
