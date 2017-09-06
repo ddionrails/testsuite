@@ -1,5 +1,7 @@
 import os,sys
 import numpy as np
+from os import listdir
+import re
 
 from lib_py.generation_scripts import Generations
 
@@ -7,6 +9,9 @@ sys.path.append(os.path.abspath("../ddi.py"))
 from ddi.dataset import Dataset
 
 def import_data(dataset, format, testscript):
+    
+    print("")
+    print("[Generation]: Import Data (%s)" % dataset)
 
     d1 = Dataset()
 
@@ -36,6 +41,9 @@ def import_data(dataset, format, testscript):
     
 
 def process(dataset, format, generationscript, stats):
+
+    print("")
+    print("[Generation]: Data Processing (%s)" % dataset)
 
     d1 = Dataset()
 
@@ -75,12 +83,14 @@ def process(dataset, format, generationscript, stats):
         print("The format for statistics %s is not supported" % stats)
 
     # generations
-    if generationscript == "generate_bmi":
+    if isinstance(generationscript, str):
+        
         d2 = Generations(d1)
         
-        #method = getattr(Generations, generationscript)
-        #d2.method()
-        eval("d2.generationscript")()
+        try:
+            eval("d2." + generationscript + "()")
+        except:
+            print("[Error]: The generationscript %s doesn't exist" % generationscript)
     
         d1.write_tdp(
             "03-data-generation/output/" + dataset + "_gen.csv", 
@@ -103,11 +113,20 @@ def process(dataset, format, generationscript, stats):
         else:
             print("The format for statistics %s is not supported" % stats)
             
-'''        
+      
 def export_data(dataset, testscript):
 
-    d1 = Dataset()
+    print("")
+    print("[Generation]: Export Data (%s)" % dataset)
 
+    d1 = Dataset()
+    
+    fil = [f for f in listdir("03-data-generation/output/") if re.search("^" + dataset + "(\.|\_)", f)]
+    
+    
+    for i in fil:
+        print(i)
+    
     d1.read_tdp(
         "03-data-generation/output/" + dataset + ".csv", 
         "03-data-generation/output/" + dataset + ".json"
@@ -121,7 +140,7 @@ def export_data(dataset, testscript):
         "03-temp/" + dataset + ".csv", 
         "03-temp/" + dataset + ".json"
     )
-    shutil.copy2("03-data-generation/output/" + dataset + "_stats." + stats)
+    # shutil.copy2("03-data-generation/output/" + dataset + "_stats." + stats)
     # to doooooooooooooooooooooooooooo
     #
     # 
@@ -148,4 +167,4 @@ def export_data(dataset, testscript):
     except:
         pass
         
-'''
+

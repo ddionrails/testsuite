@@ -6,6 +6,9 @@ from ddi.dataset import Dataset
 
 def import_data(dataset, format, testscript):
 
+    print("")
+    print("[Data Processing]: Import Data (%s)" % dataset)
+
     d1 = Dataset()
 
     if format == "tdp":
@@ -34,7 +37,10 @@ def import_data(dataset, format, testscript):
 
     
 def process(dataset, format, testscript):
-
+    
+    print("")
+    print("[Data Processing]: Data Processing (%s)" % dataset)
+    
     d1 = Dataset()
 
     if format == "tdp":
@@ -64,6 +70,9 @@ def process(dataset, format, testscript):
 
 
 def export_data(dataset, format, testscript):
+
+    print("")
+    print("[Data Processing]: Export Data (%s)" % dataset)
 
     d1 = Dataset()
 

@@ -22,9 +22,7 @@ for index, row in metadata.iterrows():
         stats=row["stats"]
     )
     
-    '''
     export_data(
         dataset=row["dataset"],
         testscript=row["testscript"]
     )
-    '''
