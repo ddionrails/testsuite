@@ -1,4 +1,4 @@
-import os,sys
+import os,sys, shutil
 import numpy as np
 from os import listdir
 import re
@@ -121,50 +121,13 @@ def export_data(dataset, testscript):
 
     d1 = Dataset()
     
-    fil = [f for f in listdir("03-data-generation/output/") if re.search("^" + dataset + "(\.|\_)", f)]
+    file_names = [f for f in listdir("03-data-generation/output/") if re.search("^" + dataset + "(\.|\_)", f)]
     
     
-    for i in fil:
-        print(i)
-    
-    d1.read_tdp(
-        "03-data-generation/output/" + dataset + ".csv", 
-        "03-data-generation/output/" + dataset + ".json"
-    )
-
-    # Export test
-    sys.path.append('03-data-generation/test')
-    import export_test
-
-    d1.write_tdp(
-        "03-temp/" + dataset + ".csv", 
-        "03-temp/" + dataset + ".json"
-    )
-    # shutil.copy2("03-data-generation/output/" + dataset + "_stats." + stats)
-    # to doooooooooooooooooooooooooooo
-    #
-    # 
-    #
-    #
-    #
-    #!!!!!!!!!!!
-    
-    try:
-        d1.read_tdp(
-            "03-data-generation/output/" + dataset + "_gen.csv", 
-            "03-data-generation/output/" + dataset + "_gen.json"
-        )
-
-        # Export test
-        sys.path.append('03-data-generation/test')
-        import export_test
-
-        d1.write_tdp(
-            "03-temp/" + dataset + "_gen.csv", 
-            "03-temp/" + dataset + "_gen.json"
-        )
-        
-    except:
-        pass
+    for file_name in file_names:
+        # t1 = Test(file_name)
+        # t1.exporttest()
+        print("Copy " + file_name + " in 03-temp/")
+        shutil.copy2("03-data-generation/output/" + file_name, "03-temp/" + file_name)
         
 

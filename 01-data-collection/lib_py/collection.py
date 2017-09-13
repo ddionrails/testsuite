@@ -5,6 +5,9 @@ from ddi.dataset import Dataset
 
 def export_data(dataset, format, testscript):
 
+    print("")
+    print("[Data-Collection]: Export Data (%s)" % dataset)
+
     d1 = Dataset()
 
     if format == "tdp":
