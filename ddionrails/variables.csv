@@ -1,0 +1,10 @@
+study_name,dataset_name,variable_name,concept_namespace,concept_name,instrument_name,question_name,item_name,primary_key,description,description_long,boost,basket_key,basket_is_default
+soep-test,ah,ah01,soep-test,hkind,soep-test-2001-hh,1,,,"Das ist ein Kommentar mit **bold** test und einer Liste:
+
+- eins
+- zwei
+",Long comment,,,
+soep-test,ah,ah02,soep-test,hkind_dummy,soep-test-2001-hh,2,,,,,,,
+soep-test,ah,ah03,soep-test,hkgeba,soep-test-2001-hh,3,,,,,,,
+soep-test,ah,ah04,soep-test,hkgebb,soep-test-2001-hh,3,,,,,,,
+soep-test,ah,ah05,soep-test,hkgebc,soep-test-2001-hh,3,,,,,,,

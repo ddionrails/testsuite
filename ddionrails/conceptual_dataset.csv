@@ -1,0 +1,10 @@
+conceptual_dataset_name,label,description
+org/net,Original data (net),"Information from succesfull interviewed respondents, mostly based on a questionnaire"
+gen,Generated data,Generated data and check for longitudinally consistency
+track,Structure or tracking files,Essential files to track persons or household over time
+org/gross,Original data (gross),"Information on gross sample, mostly from the field work"
+survey,Survey methodology,Dataset describing the survey design or weighting scheme
+raw,Raw data (undistributed),Undistributed original datasets
+net-long,Original data for long datasets,
+gen-long,Generated data for long datasets,
+

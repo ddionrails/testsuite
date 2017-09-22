@@ -13,3 +13,7 @@ for index, row in metadata.iterrows():
         dataset=row["dataset"],
         testscript=row["testscript"]
     )
+    
+    export_to_ddi(
+        dataset=row["dataset"]
+    )

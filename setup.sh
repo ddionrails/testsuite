@@ -14,9 +14,3 @@ rm -rf 04-data-distribution/output
 mkdir -p 04-data-distribution/output/data
 mkdir -p 04-data-distribution/output/generations
 mkdir -p 04-data-distribution/output/statistics
-
-rm -rf *temp
-mkdir 01-temp
-mkdir 02-temp
-mkdir 03-temp
-mkdir 04-temp

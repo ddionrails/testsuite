@@ -1,0 +1,6 @@
+period_name,label,description,definition
+wave 1,1998,,1998
+wave 2,1999,,1999
+wave 3,2000,,2000
+wave 4,2001,,2001
+long,long,,1998:2001
