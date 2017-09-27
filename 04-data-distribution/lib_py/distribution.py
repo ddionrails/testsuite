@@ -15,9 +15,6 @@ def export_data(dataset, testscript):
     
     
     for file_name in file_names:
-        # t1 = Test(file_name)
-        # t1.exporttest()
-        # statistics, generations, data
         if "_stats" in file_name:
             print("Copy " + file_name + " in 04-data-distribution/statistics/")
             shutil.copy2(

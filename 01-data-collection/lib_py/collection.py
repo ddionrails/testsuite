@@ -1,5 +1,8 @@
 import os,sys
 
+sys.path.append(os.path.abspath("."))
+from metatest.test import Metatest
+
 sys.path.append(os.path.abspath("../ddi.py"))
 from ddi.dataset import Dataset
 
@@ -25,9 +28,7 @@ def export_data(dataset, format, testscript):
         print("[ERROR]: Wrong format: %s for %s" % (format, dataset))
 
     # Export test
-    if testscript != "":
-        sys.path.append('01-data-collection/test')
-        import export_test
+    d2 = Metatest(d1)
 
     d1.write_tdp(
         "01-temp/" + dataset + ".csv", 

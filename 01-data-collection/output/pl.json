@@ -8,32 +8,53 @@
           {
             "name": "pid",
             "label": "PID",
-            "type": "number"
+            "type": "number",
+            "min": 0,
+            "max": 999999,
+            "primary_key": true
+          },
+          {
+            "name": "hid",
+            "label": "HID",
+            "type": "number",
+            "min": 0,
+            "max": 999999,
+            "foreign_key": "hl/hid"
           },
           {
             "name": "wave",
             "label": "wave",
-            "type": "number"
+            "type": "number",
+            "min": 1984,
+            "max": 2017
           },
           {
             "name": "bodyweight",
             "label": "Body weight.",
-            "type": "number"
+            "type": "number",
+            "min": 0,
+            "max": 300
           },
           {
             "name": "bodyheight",
             "label": "Body height.",
-            "type": "number"
+            "type": "number",
+            "min": 0,
+            "max": 250
           },
           {
             "name": "weight",
             "label": "weight",
-            "type": "number"
+            "type": "number",
+            "min": 0,
+            "max": 999999
           },
           {
             "name": "stat",
             "label": "Relationship status.",
             "type": "cat",
+            "min": -9,
+            "max": 4,
             "values": [
               {"value": 1, "label": "Single"},
               {"value": 2, "label": "Married"},
@@ -45,6 +66,8 @@
             "name": "smo",
             "label": "Smoking?",
             "type": "cat",
+            "min": -9,
+            "max": 2,
             "values": [
               {"value": 1, "label": "Yes"},
               {"value": 2, "label": "No"}

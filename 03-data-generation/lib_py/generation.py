@@ -3,6 +3,9 @@ import numpy as np
 from os import listdir
 import re
 
+sys.path.append(os.path.abspath("."))
+from metatest.test import Metatest
+
 from lib_py.generation_scripts import Generations
 
 sys.path.append(os.path.abspath("../ddi.py"))
@@ -28,11 +31,6 @@ def import_data(dataset, format, testscript):
     
     else:
         print("[ERROR]: Wrong format: %s for %s" % (format, dataset))
-
-    # Export test
-    if testscript != "":
-        sys.path.append('03-data-generation/test')
-        import import_test
 
     d1.write_tdp(
         "03-data-generation/input/" + dataset + ".csv", 
@@ -60,7 +58,8 @@ def process(dataset, format, generationscript, stats):
     
     else:
         print("[ERROR]: Wrong format: %s for %s" % (format, dataset))
-
+    
+    d2 = Metatest(d1)
     d1.write_tdp(
         "03-data-generation/output/" + dataset + ".csv", 
         "03-data-generation/output/" + dataset + ".json"
@@ -91,7 +90,8 @@ def process(dataset, format, generationscript, stats):
             eval("d2." + generationscript + "()")
         except:
             print("[Error]: The generationscript %s doesn't exist" % generationscript)
-    
+        
+        d2 = Metatest(d1)
         d1.write_tdp(
             "03-data-generation/output/" + dataset + "_gen.csv", 
             "03-data-generation/output/" + dataset + "_gen.json"
@@ -119,14 +119,10 @@ def export_data(dataset, testscript):
     print("")
     print("[Generation]: Export Data (%s)" % dataset)
 
-    d1 = Dataset()
-    
     file_names = [f for f in listdir("03-data-generation/output/") if re.search("^" + dataset + "(\.|\_)", f)]
     
     
     for file_name in file_names:
-        # t1 = Test(file_name)
-        # t1.exporttest()
         print("Copy " + file_name + " in 03-temp/")
         shutil.copy2("03-data-generation/output/" + file_name, "03-temp/" + file_name)
         

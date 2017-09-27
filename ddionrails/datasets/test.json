@@ -1,46 +1,16 @@
 [
   {
-    "dataset": "test",
-    "label": "ID",
-    "period": "",
-    "dataset_cs": "test",
-    "name_cs": "id",
-    "study": "",
     "analysis_unit": "",
-    "name": "id",
-    "scale": "num",
-    "sub_type": "",
-    "statistics": {
-      "values": [
-        "1",
-        "2.0",
-        "4.0",
-        "4.55",
-        "7.0",
-        "9",
-        "20",
-        "0"
-      ],
-      "names": [
-        "Min.",
-        "1st Qu.",
-        "Median",
-        "Mean",
-        "3rd Qu.",
-        "Max.",
-        "Valid",
-        "Invalid"
-      ]
-    },
     "variable": "id",
+    "sub_type": "",
+    "scale": "num",
+    "dataset": "test",
     "uni": {
-      "by": 0.42105263157894735,
-      "min": 1.0,
-      "max": 9.0,
-      "missing": [
-        0
-      ],
-      "total": 20,
+      "num_missings": {
+        "labels": [],
+        "values": [],
+        "frequencies": []
+      },
       "density": [
         0.0904046253803645,
         0.10020186908497693,
@@ -63,36 +33,17 @@
         0.07219090185886383,
         0.0625952665928196
       ],
-      "num_missings": {
-        "values": [],
-        "labels": [],
-        "frequencies": []
-      },
-      "valid": 20
-    }
-  },
-  {
-    "dataset": "test",
-    "label": "wave",
-    "period": "",
-    "dataset_cs": "test",
-    "name_cs": "wave",
-    "study": "",
-    "analysis_unit": "",
-    "name": "wave",
-    "scale": "num",
-    "sub_type": "",
+      "valid": 20,
+      "by": 0.42105263157894735,
+      "min": 1.0,
+      "total": 20,
+      "max": 9.0,
+      "missing": [
+        0
+      ]
+    },
+    "name_cs": "id",
     "statistics": {
-      "values": [
-        "1998",
-        "1999.0",
-        "1999.5",
-        "1999.65",
-        "2000.5",
-        "2001",
-        "20",
-        "0"
-      ],
       "names": [
         "Min.",
         "1st Qu.",
@@ -102,17 +53,36 @@
         "Max.",
         "Valid",
         "Invalid"
+      ],
+      "values": [
+        "1",
+        "2.0",
+        "4.0",
+        "4.55",
+        "7.0",
+        "9",
+        "20",
+        "0"
       ]
     },
+    "period": "",
+    "dataset_cs": "test",
+    "name": "id",
+    "label": "ID",
+    "study": ""
+  },
+  {
+    "analysis_unit": "",
     "variable": "wave",
+    "sub_type": "",
+    "scale": "num",
+    "dataset": "test",
     "uni": {
-      "by": 0.15789473684208133,
-      "min": 1998.0,
-      "max": 2001.0,
-      "missing": [
-        0
-      ],
-      "total": 20,
+      "num_missings": {
+        "labels": [],
+        "values": [],
+        "frequencies": []
+      },
       "density": [
         0.12756387827069765,
         0.1592686041788,
@@ -135,36 +105,17 @@
         0.2322198448476048,
         0.2177521849332855
       ],
-      "num_missings": {
-        "values": [],
-        "labels": [],
-        "frequencies": []
-      },
-      "valid": 20
-    }
-  },
-  {
-    "dataset": "test",
-    "label": "Body weight.",
-    "period": "",
-    "dataset_cs": "test",
-    "name_cs": "body_weight",
-    "study": "",
-    "analysis_unit": "",
-    "name": "body_weight",
-    "scale": "num",
-    "sub_type": "",
+      "valid": 20,
+      "by": 0.15789473684208133,
+      "min": 1998.0,
+      "total": 20,
+      "max": 2001.0,
+      "missing": [
+        0
+      ]
+    },
+    "name_cs": "wave",
     "statistics": {
-      "values": [
-        "2",
-        "42.0",
-        "63.5",
-        "109.95",
-        "90.0",
-        "1002",
-        "20",
-        "0"
-      ],
       "names": [
         "Min.",
         "1st Qu.",
@@ -174,17 +125,36 @@
         "Max.",
         "Valid",
         "Invalid"
+      ],
+      "values": [
+        "1998",
+        "1999.0",
+        "1999.5",
+        "1999.65",
+        "2000.5",
+        "2001",
+        "20",
+        "0"
       ]
     },
+    "period": "",
+    "dataset_cs": "test",
+    "name": "wave",
+    "label": "wave",
+    "study": ""
+  },
+  {
+    "analysis_unit": "",
     "variable": "body_weight",
+    "sub_type": "",
+    "scale": "num",
+    "dataset": "test",
     "uni": {
-      "by": 52.63157894736842,
-      "min": 2.0,
-      "max": 1002.0,
-      "missing": [
-        0
-      ],
-      "total": 20,
+      "num_missings": {
+        "labels": [],
+        "values": [],
+        "frequencies": []
+      },
       "density": [
         0.002757415746918308,
         0.003123783065651879,
@@ -207,36 +177,17 @@
         0.00015443088450063395,
         0.00017097223978211008
       ],
-      "num_missings": {
-        "values": [],
-        "labels": [],
-        "frequencies": []
-      },
-      "valid": 20
-    }
-  },
-  {
-    "dataset": "test",
-    "label": "Body height.",
-    "period": "",
-    "dataset_cs": "test",
-    "name_cs": "body_height",
-    "study": "",
-    "analysis_unit": "",
-    "name": "body_height",
-    "scale": "num",
-    "sub_type": "",
+      "valid": 20,
+      "by": 52.63157894736842,
+      "min": 2.0,
+      "total": 20,
+      "max": 1002.0,
+      "missing": [
+        0
+      ]
+    },
+    "name_cs": "body_weight",
     "statistics": {
-      "values": [
-        "30",
-        "147.5",
-        "170.0",
-        "156.15",
-        "180.0",
-        "200",
-        "20",
-        "0"
-      ],
       "names": [
         "Min.",
         "1st Qu.",
@@ -246,17 +197,36 @@
         "Max.",
         "Valid",
         "Invalid"
+      ],
+      "values": [
+        "2",
+        "42.0",
+        "63.5",
+        "109.95",
+        "90.0",
+        "1002",
+        "20",
+        "0"
       ]
     },
+    "period": "",
+    "dataset_cs": "test",
+    "name": "body_weight",
+    "label": "Body weight.",
+    "study": ""
+  },
+  {
+    "analysis_unit": "",
     "variable": "body_height",
+    "sub_type": "",
+    "scale": "num",
+    "dataset": "test",
     "uni": {
-      "by": 8.94736842105263,
-      "min": 30.0,
-      "max": 200.0,
-      "missing": [
-        0
-      ],
-      "total": 20,
+      "num_missings": {
+        "labels": [],
+        "values": [],
+        "frequencies": []
+      },
       "density": [
         0.0014140442861363986,
         0.001517681591032968,
@@ -279,36 +249,17 @@
         0.009089261895912273,
         0.0071846505191591956
       ],
-      "num_missings": {
-        "values": [],
-        "labels": [],
-        "frequencies": []
-      },
-      "valid": 20
-    }
-  },
-  {
-    "dataset": "test",
-    "label": "weight",
-    "period": "",
-    "dataset_cs": "test",
-    "name_cs": "weight",
-    "study": "",
-    "analysis_unit": "",
-    "name": "weight",
-    "scale": "num",
-    "sub_type": "",
+      "valid": 20,
+      "by": 8.94736842105263,
+      "min": 30.0,
+      "total": 20,
+      "max": 200.0,
+      "missing": [
+        0
+      ]
+    },
+    "name_cs": "body_height",
     "statistics": {
-      "values": [
-        "0",
-        "1.0",
-        "2.0",
-        "3.4",
-        "6.0",
-        "9",
-        "20",
-        "0"
-      ],
       "names": [
         "Min.",
         "1st Qu.",
@@ -318,17 +269,36 @@
         "Max.",
         "Valid",
         "Invalid"
+      ],
+      "values": [
+        "30",
+        "147.5",
+        "170.0",
+        "156.15",
+        "180.0",
+        "200",
+        "20",
+        "0"
       ]
     },
+    "period": "",
+    "dataset_cs": "test",
+    "name": "body_height",
+    "label": "Body height.",
+    "study": ""
+  },
+  {
+    "analysis_unit": "",
     "variable": "weight",
+    "sub_type": "",
+    "scale": "num",
+    "dataset": "test",
     "uni": {
-      "by": 0.47368421052631576,
-      "min": 0.0,
-      "max": 9.0,
-      "missing": [
-        0
-      ],
-      "total": 20,
+      "num_missings": {
+        "labels": [],
+        "values": [],
+        "frequencies": []
+      },
       "density": [
         0.10838237941529431,
         0.12163097052683407,
@@ -351,12 +321,42 @@
         0.050410653230405174,
         0.043398949226006435
       ],
-      "num_missings": {
-        "values": [],
-        "labels": [],
-        "frequencies": []
-      },
-      "valid": 20
-    }
+      "valid": 20,
+      "by": 0.47368421052631576,
+      "min": 0.0,
+      "total": 20,
+      "max": 9.0,
+      "missing": [
+        0
+      ]
+    },
+    "name_cs": "weight",
+    "statistics": {
+      "names": [
+        "Min.",
+        "1st Qu.",
+        "Median",
+        "Mean",
+        "3rd Qu.",
+        "Max.",
+        "Valid",
+        "Invalid"
+      ],
+      "values": [
+        "0",
+        "1.0",
+        "2.0",
+        "3.4",
+        "6.0",
+        "9",
+        "20",
+        "0"
+      ]
+    },
+    "period": "",
+    "dataset_cs": "test",
+    "name": "weight",
+    "label": "weight",
+    "study": ""
   }
 ]

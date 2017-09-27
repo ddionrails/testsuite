@@ -1,118 +1,16 @@
 [
   {
-    "dataset": "hl",
-    "label": "PID",
-    "period": "",
-    "dataset_cs": "hl",
-    "name_cs": "pid",
-    "study": "",
     "analysis_unit": "",
-    "name": "pid",
-    "scale": "num",
+    "variable": "hid",
     "sub_type": "",
-    "statistics": {
-      "values": [
-        "1",
-        "2.0",
-        "5.5",
-        "5.11111111111",
-        "8.0",
-        "9",
-        "18",
-        "0"
-      ],
-      "names": [
-        "Min.",
-        "1st Qu.",
-        "Median",
-        "Mean",
-        "3rd Qu.",
-        "Max.",
-        "Valid",
-        "Invalid"
-      ]
-    },
-    "variable": "pid",
+    "scale": "num",
+    "dataset": "hl",
     "uni": {
-      "by": 0.42105263157894735,
-      "min": 1.0,
-      "max": 9.0,
-      "missing": [
-        0
-      ],
-      "total": 18,
-      "density": [
-        0.07307687791069262,
-        0.07795348574746223,
-        0.08083227252580648,
-        0.08233171174645804,
-        0.08323700802099183,
-        0.08423817394859379,
-        0.08575208151246563,
-        0.08788416560699412,
-        0.0905111465366847,
-        0.09341296002486024,
-        0.09637543890700184,
-        0.09921992047269505,
-        0.10176474494459928,
-        0.10375858482533849,
-        0.10483406944683848,
-        0.10451649228686578,
-        0.10229809488573494,
-        0.09776299305036643,
-        0.09072672481502285,
-        0.08134265498308588
-      ],
       "num_missings": {
-        "values": [],
         "labels": [],
+        "values": [],
         "frequencies": []
       },
-      "valid": 18
-    }
-  },
-  {
-    "dataset": "hl",
-    "label": "HID",
-    "period": "",
-    "dataset_cs": "hl",
-    "name_cs": "hid",
-    "study": "",
-    "analysis_unit": "",
-    "name": "hid",
-    "scale": "num",
-    "sub_type": "",
-    "statistics": {
-      "values": [
-        "1",
-        "3.0",
-        "6.5",
-        "6.11111111111",
-        "9.0",
-        "10",
-        "18",
-        "0"
-      ],
-      "names": [
-        "Min.",
-        "1st Qu.",
-        "Median",
-        "Mean",
-        "3rd Qu.",
-        "Max.",
-        "Valid",
-        "Invalid"
-      ]
-    },
-    "variable": "hid",
-    "uni": {
-      "by": 0.4736842105263157,
-      "min": 1.0,
-      "max": 10.0,
-      "missing": [
-        0
-      ],
-      "total": 18,
       "density": [
         0.04813885607521533,
         0.059168069978172,
@@ -135,182 +33,122 @@
         0.09173011878094783,
         0.08141490680423558
       ],
-      "num_missings": {
-        "values": [],
-        "labels": [],
-        "frequencies": []
-      },
-      "valid": 18
-    }
-  },
-  {
-    "dataset": "hl",
-    "label": "wave",
+      "valid": 18,
+      "by": 0.4736842105263157,
+      "min": 1.0,
+      "total": 18,
+      "max": 10.0,
+      "missing": [
+        0
+      ]
+    },
+    "name_cs": "hid",
+    "statistics": {
+      "names": [
+        "Min.",
+        "1st Qu.",
+        "Median",
+        "Mean",
+        "3rd Qu.",
+        "Max.",
+        "Valid",
+        "Invalid"
+      ],
+      "values": [
+        "1",
+        "3.0",
+        "6.5",
+        "6.11111111111",
+        "9.0",
+        "10",
+        "18",
+        "0"
+      ]
+    },
     "period": "",
     "dataset_cs": "hl",
-    "name_cs": "wave",
-    "study": "",
+    "name": "hid",
+    "label": "HID",
+    "study": ""
+  },
+  {
     "analysis_unit": "",
-    "name": "wave",
-    "scale": "num",
+    "variable": "wave",
     "sub_type": "",
+    "scale": "num",
+    "dataset": "hl",
+    "uni": {
+      "num_missings": {
+        "labels": [],
+        "values": [],
+        "frequencies": []
+      },
+      "density": [
+        0.13211245814813435,
+        0.16193458472950198,
+        0.19743889023629224,
+        0.23838033056302596,
+        0.28118952636158734,
+        0.3195091375216273,
+        0.34691985865306235,
+        0.36031874673800535,
+        0.3615564764064123,
+        0.355960766659068,
+        0.34867186651379684,
+        0.3414472972940593,
+        0.33224187429762686,
+        0.31766361819678135,
+        0.29618244538815586,
+        0.2695565691742567,
+        0.24157053497035694,
+        0.21536148897394758,
+        0.19153814707077774,
+        0.16839165696729916
+      ],
+      "valid": 18,
+      "by": 0.15789473684208133,
+      "min": 1998.0,
+      "total": 18,
+      "max": 2001.0,
+      "missing": [
+        0
+      ]
+    },
+    "name_cs": "wave",
     "statistics": {
+      "names": [
+        "Min.",
+        "1st Qu.",
+        "Median",
+        "Mean",
+        "3rd Qu.",
+        "Max.",
+        "Valid",
+        "Invalid"
+      ],
       "values": [
         "1998",
         "1999.0",
         "1999.5",
-        "1999.61111111",
+        "1999.55555556",
         "2000.0",
         "2001",
         "18",
         "0"
-      ],
-      "names": [
-        "Min.",
-        "1st Qu.",
-        "Median",
-        "Mean",
-        "3rd Qu.",
-        "Max.",
-        "Valid",
-        "Invalid"
       ]
     },
-    "variable": "wave",
-    "uni": {
-      "by": 0.15789473684208133,
-      "min": 1998.0,
-      "max": 2001.0,
-      "missing": [
-        0
-      ],
-      "total": 18,
-      "density": [
-        0.13479064832971083,
-        0.16533604957713882,
-        0.20023421017092352,
-        0.2383638950068358,
-        0.2763336757832357,
-        0.3090911619281519,
-        0.331801093432109,
-        0.3420135237881998,
-        0.3407521814120526,
-        0.3317670542698897,
-        0.3194390933505724,
-        0.3067460271017305,
-        0.29455275375673207,
-        0.2824012667714918,
-        0.26984708808760155,
-        0.2571288987172711,
-        0.24470735756362866,
-        0.23226392576111843,
-        0.2182091588611067,
-        0.2002834068183823
-      ],
-      "num_missings": {
-        "values": [],
-        "labels": [],
-        "frequencies": []
-      },
-      "valid": 18
-    }
-  },
-  {
-    "dataset": "hl",
-    "label": "Household Net Income",
     "period": "",
     "dataset_cs": "hl",
-    "name_cs": "income",
-    "study": "",
-    "analysis_unit": "",
-    "name": "income",
-    "scale": "num",
-    "sub_type": "",
-    "statistics": {
-      "values": [
-        "20",
-        "500.0",
-        "2000.0",
-        "153326.111111",
-        "20000.0",
-        "1500000",
-        "18",
-        "0"
-      ],
-      "names": [
-        "Min.",
-        "1st Qu.",
-        "Median",
-        "Mean",
-        "3rd Qu.",
-        "Max.",
-        "Valid",
-        "Invalid"
-      ]
-    },
-    "variable": "income",
-    "uni": {
-      "by": 78946.31578947368,
-      "min": 20.0,
-      "max": 1500000.0,
-      "missing": [
-        0
-      ],
-      "total": 18,
-      "density": [
-        1.5081598930050145e-06,
-        1.4518587085628265e-06,
-        1.2487929256534777e-06,
-        9.61175633709559e-07,
-        6.635958172635297e-07,
-        4.130851089935377e-07,
-        2.3543382962040817e-07,
-        1.2930424383785957e-07,
-        7.892393638352223e-08,
-        6.53665935364547e-08,
-        7.217895975484684e-08,
-        8.667246881296133e-08,
-        9.996854334818505e-08,
-        1.0742484583796908e-07,
-        1.0889055049948556e-07,
-        1.0749559676688743e-07,
-        1.0682143758943088e-07,
-        1.0800857868451306e-07,
-        1.0882179452042739e-07,
-        1.0532550250907316e-07
-      ],
-      "num_missings": {
-        "values": [],
-        "labels": [],
-        "frequencies": []
-      },
-      "valid": 18
-    }
+    "name": "wave",
+    "label": "wave",
+    "study": ""
   },
   {
-    "dataset": "hl",
-    "label": "Neighborhood Of Household",
-    "period": "",
-    "dataset_cs": "hl",
-    "name_cs": "neighbor",
-    "study": "",
     "analysis_unit": "",
-    "name": "neighbor",
-    "scale": "cat",
-    "sub_type": "",
-    "statistics": {
-      "values": [
-        "2.0",
-        "18",
-        "0"
-      ],
-      "names": [
-        "Median",
-        "Valid",
-        "Invalid"
-      ]
-    },
     "variable": "neighbor",
+    "sub_type": "",
+    "scale": "cat",
+    "dataset": "hl",
     "uni": {
       "labels": [
         "Res. Area Old",
@@ -340,37 +178,55 @@
         "false",
         "false"
       ]
-    }
-  },
-  {
-    "dataset": "hl",
-    "label": "text",
+    },
+    "name_cs": "neighbor",
+    "statistics": {
+      "names": [
+        "Median",
+        "Valid",
+        "Invalid"
+      ],
+      "values": [
+        "2.0",
+        "18",
+        "0"
+      ]
+    },
     "period": "",
     "dataset_cs": "hl",
-    "name_cs": "text",
-    "study": "",
+    "name": "neighbor",
+    "label": "Neighborhood Of Household",
+    "study": ""
+  },
+  {
     "analysis_unit": "",
-    "name": "text",
-    "scale": "str",
+    "variable": "text",
     "sub_type": "",
-    "statistics": {
-      "values": [
-        "14",
-        "4"
+    "scale": "str",
+    "dataset": "hl",
+    "uni": {
+      "missings": [
+        1
       ],
+      "frequencies": [
+        12
+      ]
+    },
+    "name_cs": "text",
+    "statistics": {
       "names": [
         "Valid",
         "Invalid"
+      ],
+      "values": [
+        "14",
+        "4"
       ]
     },
-    "variable": "text",
-    "uni": {
-      "frequencies": [
-        12
-      ],
-      "missings": [
-        1
-      ]
-    }
+    "period": "",
+    "dataset_cs": "hl",
+    "name": "text",
+    "label": "text",
+    "study": ""
   }
 ]

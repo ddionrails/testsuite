@@ -6,29 +6,33 @@
       "schema": {
         "fields": [
           {
-            "name": "pid",
-            "label": "PID",
-            "type": "number"
-          },
-          {
             "name": "hid",
             "label": "HID",
-            "type": "number"
+            "type": "number",
+            "min": 0,
+            "max": 999999,
+            "primary_key": true
           },
           {
             "name": "wave",
             "label": "wave",
-            "type": "number"
+            "type": "number",
+            "min": 1984,
+            "max": 2017
           },
           {
             "name": "income",
             "label": "Household Net Income",
-            "type": "number"
+            "type": "number",
+            "min": 0,
+            "max": 999999999
           },
           {
             "name": "neighbor",
             "label": "Neighborhood Of Household",
             "type": "cat",
+            "min": -9,
+            "max": 5,
             "values": [
               {"value": 1, "label": "Res. Area Old"},
               {"value": 2, "label": "Res. Area New"},
