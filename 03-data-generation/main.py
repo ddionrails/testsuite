@@ -19,6 +19,7 @@ for index, row in metadata.iterrows():
         dataset=row["dataset"],
         format=row["format"],
         generationscript=row["generationscript"],
+        splitlong=row["split_long"],
         stats=row["stats"]
     )
     

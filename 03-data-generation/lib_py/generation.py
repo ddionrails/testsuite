@@ -38,7 +38,7 @@ def import_data(dataset, format, testscript):
     )
     
 
-def process(dataset, format, generationscript, stats):
+def process(dataset, format, generationscript, splitlong, stats):
 
     print("")
     print("[Generation]: Data Processing (%s)" % dataset)
@@ -80,6 +80,11 @@ def process(dataset, format, generationscript, stats):
         )
     else:
         print("The format for statistics %s is not supported" % stats)
+
+    # split long dataset
+    if splitlong == 1:
+        d2 = Generations(d1)
+        d2.splitlong()
 
     # generations
     if isinstance(generationscript, str):

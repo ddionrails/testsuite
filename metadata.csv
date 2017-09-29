@@ -1,4 +1,3 @@
-study_name,dataset,dataset_de,format,long,weight,split,testscript,generationscript,stats
-soep-core,pl,,tdp,1,weight,,,,json
-soep-core,hl,,tdp,1,,,,,json
-soep-core,test,,tdp,0,,,,generate_bmi,json
+study_name,dataset,dataset_de,format,long,split_long,weight,split,testscript,generationscript,stats
+soep-core,pl,,tdp,1,1,weight,,,generate_bmi,json
+soep-core,hl,,tdp,1,1,,,,,json
