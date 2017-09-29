@@ -1,5 +1,4 @@
 import os,sys
-import unittest
 import numpy as np
 
 sys.path.append(os.path.abspath("../ddi.py"))
