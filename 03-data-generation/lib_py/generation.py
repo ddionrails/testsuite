@@ -85,6 +85,7 @@ def process(dataset, format, generationscript, splitlong, stats):
     if splitlong == 1:
         d2 = Generations(d1)
         d2.splitlong()
+        
 
     # generations
     if isinstance(generationscript, str):
