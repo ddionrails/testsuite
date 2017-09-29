@@ -1,5 +1,5 @@
 study_name,dataset_name,period_name,analysis_unit_name,conceptual_dataset_name,label,description,boost
-testsuite,hl,,h,org/net,,,2
-testsuite,pl,,p,org/net,,,2
-testsuite,test,,p,org/net,,,0.5
-testsuite,test_gen,,p,gen,,,1
+testsuite,hl,long,h,org/net,,,2
+testsuite,pl,long,p,org/net,,,2
+testsuite,test,long,p,org/net,,,0.5
+testsuite,test_gen,long,p,gen,,,1
