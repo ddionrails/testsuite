@@ -29,15 +29,15 @@ class Generations(Dataset):
             temp = Dataset()
             temp.dataset = self.dataset.ix[self.dataset["wave"] == year]
             
-            # TO DO: Metadaten anpassen!!!
-            temp.metadata = self.metadata
-            
+            temp.metadata = self.metadata.copy()          
 
             data_name = chr(wave) + re.search('(.*)(?!$)', temp.metadata["name"]).group(1)
+            temp.metadata["name"] = data_name
+            temp.metadata["resources"][0]["path"] = data_name + ".csv"
             
             temp.write_tdp(
-                "03-data-generation/output/" + data_name + ".csv",
-                "03-data-generation/output/" + data_name + ".json"
+                "04-data-distribution/output/data_in_wide/" + data_name + ".csv",
+                "04-data-distribution/output/data_in_wide/" + data_name + ".json"
             )
             
             wave = wave+1

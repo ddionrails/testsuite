@@ -1,14 +1,15 @@
 [
   {
-    "analysis_unit": "",
-    "scale": "num",
+    "study": "",
+    "dataset_cs": "pl",
+    "name": "pid",
     "uni": {
-      "max": 43.0,
       "num_missings": {
-        "frequencies": [],
+        "labels": [],
         "values": [],
-        "labels": []
+        "frequencies": []
       },
+      "valid": 20,
       "total": 20,
       "density": [
         0.0281303251996439,
@@ -32,22 +33,14 @@
         0.013199334465731544,
         0.011873685981567359
       ],
-      "valid": 20,
+      "by": 1.6842105263157894,
       "min": 11.0,
+      "max": 43.0,
       "missing": [
         0
-      ],
-      "by": 1.6842105263157894
+      ]
     },
-    "sub_type": "",
-    "name_cs": "pid",
-    "dataset": "pl",
-    "study": "",
-    "period": "",
-    "name": "pid",
     "variable": "pid",
-    "label": "PID",
-    "dataset_cs": "pl",
     "statistics": {
       "names": [
         "Min.",
@@ -69,18 +62,26 @@
         "20",
         "0"
       ]
-    }
+    },
+    "scale": "num",
+    "sub_type": "",
+    "name_cs": "pid",
+    "period": "",
+    "analysis_unit": "",
+    "label": "PID",
+    "dataset": "pl"
   },
   {
-    "analysis_unit": "",
-    "scale": "num",
+    "study": "",
+    "dataset_cs": "pl",
+    "name": "hid",
     "uni": {
-      "max": 4.0,
       "num_missings": {
-        "frequencies": [],
+        "labels": [],
         "values": [],
-        "labels": []
+        "frequencies": []
       },
+      "valid": 20,
       "total": 20,
       "density": [
         0.3150269520192195,
@@ -104,22 +105,14 @@
         0.13515002115673638,
         0.12508702280377842
       ],
-      "valid": 20,
+      "by": 0.1578947368421053,
       "min": 1.0,
+      "max": 4.0,
       "missing": [
         0
-      ],
-      "by": 0.1578947368421053
+      ]
     },
-    "sub_type": "",
-    "name_cs": "hid",
-    "dataset": "pl",
-    "study": "",
-    "period": "",
-    "name": "hid",
     "variable": "hid",
-    "label": "HID",
-    "dataset_cs": "pl",
     "statistics": {
       "names": [
         "Min.",
@@ -141,18 +134,26 @@
         "20",
         "0"
       ]
-    }
+    },
+    "scale": "num",
+    "sub_type": "",
+    "name_cs": "hid",
+    "period": "",
+    "analysis_unit": "",
+    "label": "HID",
+    "dataset": "pl"
   },
   {
-    "analysis_unit": "",
-    "scale": "num",
+    "study": "",
+    "dataset_cs": "pl",
+    "name": "wave",
     "uni": {
-      "max": 2001.0,
       "num_missings": {
-        "frequencies": [],
+        "labels": [],
         "values": [],
-        "labels": []
+        "frequencies": []
       },
+      "valid": 20,
       "total": 20,
       "density": [
         0.12216770123739286,
@@ -176,22 +177,14 @@
         0.26399702204459163,
         0.25029900569199204
       ],
-      "valid": 20,
+      "by": 0.15789473684208133,
       "min": 1998.0,
+      "max": 2001.0,
       "missing": [
         0
-      ],
-      "by": 0.15789473684208133
+      ]
     },
-    "sub_type": "",
-    "name_cs": "wave",
-    "dataset": "pl",
-    "study": "",
-    "period": "",
-    "name": "wave",
     "variable": "wave",
-    "label": "wave",
-    "dataset_cs": "pl",
     "statistics": {
       "names": [
         "Min.",
@@ -213,18 +206,26 @@
         "20",
         "0"
       ]
-    }
+    },
+    "scale": "num",
+    "sub_type": "",
+    "name_cs": "wave",
+    "period": "",
+    "analysis_unit": "",
+    "label": "wave",
+    "dataset": "pl"
   },
   {
-    "analysis_unit": "",
-    "scale": "num",
+    "study": "",
+    "dataset_cs": "pl",
+    "name": "bodyweight",
     "uni": {
-      "max": 1002.0,
       "num_missings": {
-        "frequencies": [],
+        "labels": [],
         "values": [],
-        "labels": []
+        "frequencies": []
       },
+      "valid": 20,
       "total": 20,
       "density": [
         0.002716000512227928,
@@ -248,22 +249,14 @@
         0.0001551786372951257,
         0.0001720138763978659
       ],
-      "valid": 20,
+      "by": 52.63157894736842,
       "min": 2.0,
+      "max": 1002.0,
       "missing": [
         0
-      ],
-      "by": 52.63157894736842
+      ]
     },
-    "sub_type": "",
-    "name_cs": "bodyweight",
-    "dataset": "pl",
-    "study": "",
-    "period": "",
-    "name": "bodyweight",
     "variable": "bodyweight",
-    "label": "Body weight.",
-    "dataset_cs": "pl",
     "statistics": {
       "names": [
         "Min.",
@@ -285,18 +278,26 @@
         "20",
         "0"
       ]
-    }
+    },
+    "scale": "num",
+    "sub_type": "",
+    "name_cs": "bodyweight",
+    "period": "",
+    "analysis_unit": "",
+    "label": "Body weight.",
+    "dataset": "pl"
   },
   {
-    "analysis_unit": "",
-    "scale": "num",
+    "study": "",
+    "dataset_cs": "pl",
+    "name": "weight",
     "uni": {
-      "max": 9.0,
       "num_missings": {
-        "frequencies": [],
+        "labels": [],
         "values": [],
-        "labels": []
+        "frequencies": []
       },
+      "valid": 20,
       "total": 20,
       "density": [
         0.09446873279052885,
@@ -320,22 +321,14 @@
         0.06090544769038971,
         0.05449147211725069
       ],
-      "valid": 20,
+      "by": 0.47368421052631576,
       "min": 0.0,
+      "max": 9.0,
       "missing": [
         0
-      ],
-      "by": 0.47368421052631576
+      ]
     },
-    "sub_type": "",
-    "name_cs": "weight",
-    "dataset": "pl",
-    "study": "",
-    "period": "",
-    "name": "weight",
     "variable": "weight",
-    "label": "weight",
-    "dataset_cs": "pl",
     "statistics": {
       "names": [
         "Min.",
@@ -357,17 +350,25 @@
         "20",
         "0"
       ]
-    }
+    },
+    "scale": "num",
+    "sub_type": "",
+    "name_cs": "weight",
+    "period": "",
+    "analysis_unit": "",
+    "label": "weight",
+    "dataset": "pl"
   },
   {
-    "analysis_unit": "",
-    "scale": "cat",
+    "study": "",
+    "dataset_cs": "pl",
+    "name": "stat",
     "uni": {
-      "missings": [
-        "false",
-        "false",
-        "false",
-        "false"
+      "labels": [
+        "Single",
+        "Married",
+        "Divorced",
+        "Widowed"
       ],
       "values": [
         1,
@@ -375,11 +376,11 @@
         3,
         4
       ],
-      "labels": [
-        "Single",
-        "Married",
-        "Divorced",
-        "Widowed"
+      "missings": [
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       "frequencies": [
         9,
@@ -388,15 +389,7 @@
         1
       ]
     },
-    "sub_type": "",
-    "name_cs": "stat",
-    "dataset": "pl",
-    "study": "",
-    "period": "",
-    "name": "stat",
     "variable": "stat",
-    "label": "Relationship status.",
-    "dataset_cs": "pl",
     "statistics": {
       "names": [
         "Median",
@@ -408,38 +401,38 @@
         "20",
         "0"
       ]
-    }
+    },
+    "scale": "cat",
+    "sub_type": "",
+    "name_cs": "stat",
+    "period": "",
+    "analysis_unit": "",
+    "label": "Relationship status.",
+    "dataset": "pl"
   },
   {
-    "analysis_unit": "",
-    "scale": "cat",
+    "study": "",
+    "dataset_cs": "pl",
+    "name": "smo",
     "uni": {
-      "missings": [
-        "false",
-        "false"
+      "labels": [
+        "Yes",
+        "No"
       ],
       "values": [
         1,
         2
       ],
-      "labels": [
-        "Yes",
-        "No"
+      "missings": [
+        "false",
+        "false"
       ],
       "frequencies": [
         6,
         14
       ]
     },
-    "sub_type": "",
-    "name_cs": "smo",
-    "dataset": "pl",
-    "study": "",
-    "period": "",
-    "name": "smo",
     "variable": "smo",
-    "label": "Smoking?",
-    "dataset_cs": "pl",
     "statistics": {
       "names": [
         "Median",
@@ -451,11 +444,19 @@
         "20",
         "0"
       ]
-    }
+    },
+    "scale": "cat",
+    "sub_type": "",
+    "name_cs": "smo",
+    "period": "",
+    "analysis_unit": "",
+    "label": "Smoking?",
+    "dataset": "pl"
   },
   {
-    "analysis_unit": "",
-    "scale": "str",
+    "study": "",
+    "dataset_cs": "pl",
+    "name": "text",
     "uni": {
       "missings": [
         1
@@ -464,15 +465,7 @@
         12
       ]
     },
-    "sub_type": "",
-    "name_cs": "text",
-    "dataset": "pl",
-    "study": "",
-    "period": "",
-    "name": "text",
     "variable": "text",
-    "label": "text",
-    "dataset_cs": "pl",
     "statistics": {
       "names": [
         "Valid",
@@ -482,18 +475,26 @@
         "19",
         "1"
       ]
-    }
+    },
+    "scale": "str",
+    "sub_type": "",
+    "name_cs": "text",
+    "period": "",
+    "analysis_unit": "",
+    "label": "text",
+    "dataset": "pl"
   },
   {
-    "analysis_unit": "",
-    "scale": "num",
+    "study": "",
+    "dataset_cs": "pl",
+    "name": "bmi",
     "uni": {
-      "max": 327.18367346938777,
       "num_missings": {
-        "frequencies": [],
+        "labels": [],
         "values": [],
-        "labels": []
+        "frequencies": []
       },
+      "valid": 20,
       "total": 20,
       "density": [
         0.007818774886985918,
@@ -517,22 +518,14 @@
         0.0004768592966845183,
         0.0005290477151988217
       ],
-      "valid": 20,
+      "by": 17.18377010246823,
       "min": 0.6920415224913495,
+      "max": 327.18367346938777,
       "missing": [
         0
-      ],
-      "by": 17.18377010246823
+      ]
     },
-    "sub_type": "",
-    "name_cs": "bmi",
-    "dataset": "pl",
-    "study": "",
-    "period": "",
-    "name": "bmi",
     "variable": "bmi",
-    "label": "BMI",
-    "dataset_cs": "pl",
     "statistics": {
       "names": [
         "Min.",
@@ -554,6 +547,13 @@
         "20",
         "0"
       ]
-    }
+    },
+    "scale": "num",
+    "sub_type": "",
+    "name_cs": "bmi",
+    "period": "",
+    "analysis_unit": "",
+    "label": "BMI",
+    "dataset": "pl"
   }
 ]
