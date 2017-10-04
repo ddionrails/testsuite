@@ -64,6 +64,9 @@ def process(dataset, format, generationscript, splitlong, stats):
         "03-data-generation/output/" + dataset + ".csv", 
         "03-data-generation/output/" + dataset + ".json"
     )
+    d1.write_stata(
+        "03-data-generation/output/" + dataset + ".do"
+    )
 
     #statistics before generations
     if stats == "json":
@@ -101,6 +104,9 @@ def process(dataset, format, generationscript, splitlong, stats):
         d1.write_tdp(
             "03-data-generation/output/" + dataset + "_gen.csv", 
             "03-data-generation/output/" + dataset + "_gen.json"
+        )
+        d1.write_stata(
+            "03-data-generation/output/" + dataset + "_gen.do"
         )
         
         #statistics after generations
