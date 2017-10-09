@@ -1,16 +1,22 @@
 [
   {
+    "sub_type": "",
+    "analysis_unit": "",
+    "dataset_cs": "dp",
     "study": "",
+    "scale": "num",
     "name": "pid",
     "name_cs": "pid",
-    "label": "PID",
-    "sub_type": "",
     "variable": "pid",
     "period": "",
-    "analysis_unit": "",
-    "scale": "num",
+    "label": "PID",
     "dataset": "dp",
     "uni": {
+      "num_missings": {
+        "frequencies": [],
+        "values": [],
+        "labels": []
+      },
       "density": [
         0.014496259435918563,
         0.015145131837045281,
@@ -33,34 +39,34 @@
         0.024394296708425425,
         0.023562078815427934
       ],
-      "valid": 6,
       "by": 1.6315789473684212,
-      "min": 12.0,
       "missing": [
         0
       ],
-      "num_missings": {
-        "labels": [],
-        "values": [],
-        "frequencies": []
-      },
-      "total": 6,
-      "max": 43.0
-    },
-    "dataset_cs": "dp"
+      "valid": 6,
+      "min": 12.0,
+      "max": 43.0,
+      "total": 6
+    }
   },
   {
+    "sub_type": "",
+    "analysis_unit": "",
+    "dataset_cs": "dp",
     "study": "",
+    "scale": "num",
     "name": "hid",
     "name_cs": "hid",
-    "label": "HID",
-    "sub_type": "",
     "variable": "hid",
     "period": "",
-    "analysis_unit": "",
-    "scale": "num",
+    "label": "HID",
     "dataset": "dp",
     "uni": {
+      "num_missings": {
+        "frequencies": [],
+        "values": [],
+        "labels": []
+      },
       "density": [
         0.14179923110155596,
         0.14503335313798638,
@@ -83,63 +89,63 @@
         0.24072263380908837,
         0.23605195548097327
       ],
-      "valid": 6,
       "by": 0.1578947368421053,
-      "min": 1.0,
       "missing": [
         0
       ],
-      "num_missings": {
-        "labels": [],
-        "values": [],
-        "frequencies": []
-      },
-      "total": 6,
-      "max": 4.0
-    },
-    "dataset_cs": "dp"
+      "valid": 6,
+      "min": 1.0,
+      "max": 4.0,
+      "total": 6
+    }
   },
   {
+    "sub_type": "",
+    "analysis_unit": "",
+    "dataset_cs": "dp",
     "study": "",
+    "scale": "num",
     "name": "wave",
     "name_cs": "wave",
-    "label": "wave",
-    "sub_type": "",
     "variable": "wave",
     "period": "",
-    "analysis_unit": "",
-    "scale": "num",
+    "label": "wave",
     "dataset": "dp",
     "uni": {
+      "num_missings": {
+        "frequencies": [],
+        "values": [],
+        "labels": []
+      },
       "density": [],
-      "valid": 6,
       "by": 0,
-      "min": 2001.0,
       "missing": [
         0
       ],
-      "num_missings": {
-        "labels": [],
-        "values": [],
-        "frequencies": []
-      },
-      "total": 6,
-      "max": 2001.0
-    },
-    "dataset_cs": "dp"
+      "valid": 6,
+      "min": 2001.0,
+      "max": 2001.0,
+      "total": 6
+    }
   },
   {
+    "sub_type": "",
+    "analysis_unit": "",
+    "dataset_cs": "dp",
     "study": "",
+    "scale": "num",
     "name": "bodyweight",
     "name_cs": "bodyweight",
-    "label": "Body weight.",
-    "sub_type": "",
     "variable": "bodyweight",
     "period": "",
-    "analysis_unit": "",
-    "scale": "num",
+    "label": "Body weight.",
     "dataset": "dp",
     "uni": {
+      "num_missings": {
+        "frequencies": [],
+        "values": [],
+        "labels": []
+      },
       "density": [
         0.004897198691766791,
         0.0054395398743396686,
@@ -162,34 +168,34 @@
         0.00546003023841706,
         0.004843132042308903
       ],
-      "valid": 6,
       "by": 5.789473684210527,
-      "min": 20.0,
       "missing": [
         0
       ],
-      "num_missings": {
-        "labels": [],
-        "values": [],
-        "frequencies": []
-      },
-      "total": 6,
-      "max": 130.0
-    },
-    "dataset_cs": "dp"
+      "valid": 6,
+      "min": 20.0,
+      "max": 130.0,
+      "total": 6
+    }
   },
   {
+    "sub_type": "",
+    "analysis_unit": "",
+    "dataset_cs": "dp",
     "study": "",
+    "scale": "num",
     "name": "bodyheight",
     "name_cs": "bodyheight",
-    "label": "Body height.",
-    "sub_type": "",
     "variable": "bodyheight",
     "period": "",
-    "analysis_unit": "",
-    "scale": "num",
+    "label": "Body height.",
     "dataset": "dp",
     "uni": {
+      "num_missings": {
+        "frequencies": [],
+        "values": [],
+        "labels": []
+      },
       "density": [
         0.0019491270793164674,
         0.002001489300154524,
@@ -212,34 +218,34 @@
         0.006702628717983145,
         0.00591441384368404
       ],
-      "valid": 6,
       "by": 7.89473684210526,
-      "min": 50.0,
       "missing": [
         0
       ],
-      "num_missings": {
-        "labels": [],
-        "values": [],
-        "frequencies": []
-      },
-      "total": 6,
-      "max": 200.0
-    },
-    "dataset_cs": "dp"
+      "valid": 6,
+      "min": 50.0,
+      "max": 200.0,
+      "total": 6
+    }
   },
   {
+    "sub_type": "",
+    "analysis_unit": "",
+    "dataset_cs": "dp",
     "study": "",
+    "scale": "num",
     "name": "weight",
     "name_cs": "weight",
-    "label": "weight",
-    "sub_type": "",
     "variable": "weight",
     "period": "",
-    "analysis_unit": "",
-    "scale": "num",
+    "label": "weight",
     "dataset": "dp",
     "uni": {
+      "num_missings": {
+        "frequencies": [],
+        "values": [],
+        "labels": []
+      },
       "density": [
         0.1058628034196731,
         0.1116388317600976,
@@ -262,32 +268,27 @@
         0.037103281299820844,
         0.034779053513724914
       ],
-      "valid": 6,
       "by": 0.47368421052631576,
-      "min": 0.0,
       "missing": [
         0
       ],
-      "num_missings": {
-        "labels": [],
-        "values": [],
-        "frequencies": []
-      },
-      "total": 6,
-      "max": 9.0
-    },
-    "dataset_cs": "dp"
+      "valid": 6,
+      "min": 0.0,
+      "max": 9.0,
+      "total": 6
+    }
   },
   {
+    "sub_type": "",
+    "analysis_unit": "",
+    "dataset_cs": "dp",
     "study": "",
+    "scale": "cat",
     "name": "stat",
     "name_cs": "stat",
-    "label": "Relationship status.",
-    "sub_type": "",
     "variable": "stat",
     "period": "",
-    "analysis_unit": "",
-    "scale": "cat",
+    "label": "Relationship status.",
     "dataset": "dp",
     "uni": {
       "missings": [
@@ -296,11 +297,11 @@
         "false",
         "false"
       ],
-      "labels": [
-        "Single",
-        "Married",
-        "Divorced",
-        "Widowed"
+      "frequencies": [
+        2,
+        2,
+        1,
+        1
       ],
       "values": [
         1,
@@ -308,56 +309,56 @@
         3,
         4
       ],
-      "frequencies": [
-        2,
-        2,
-        1,
-        1
+      "labels": [
+        "Single",
+        "Married",
+        "Divorced",
+        "Widowed"
       ]
-    },
-    "dataset_cs": "dp"
+    }
   },
   {
+    "sub_type": "",
+    "analysis_unit": "",
+    "dataset_cs": "dp",
     "study": "",
+    "scale": "cat",
     "name": "smo",
     "name_cs": "smo",
-    "label": "Smoking?",
-    "sub_type": "",
     "variable": "smo",
     "period": "",
-    "analysis_unit": "",
-    "scale": "cat",
+    "label": "Smoking?",
     "dataset": "dp",
     "uni": {
       "missings": [
         "false",
         "false"
       ],
-      "labels": [
-        "Yes",
-        "No"
+      "frequencies": [
+        1,
+        5
       ],
       "values": [
         1,
         2
       ],
-      "frequencies": [
-        1,
-        5
+      "labels": [
+        "Yes",
+        "No"
       ]
-    },
-    "dataset_cs": "dp"
+    }
   },
   {
+    "sub_type": "",
+    "analysis_unit": "",
+    "dataset_cs": "dp",
     "study": "",
+    "scale": "str",
     "name": "text",
     "name_cs": "text",
-    "label": "text",
-    "sub_type": "",
     "variable": "text",
     "period": "",
-    "analysis_unit": "",
-    "scale": "str",
+    "label": "text",
     "dataset": "dp",
     "uni": {
       "missings": [
@@ -367,7 +368,6 @@
         5
       ]
     },
-    "dataset_cs": "dp",
     "statistics": {
       "values": [
         "6",
