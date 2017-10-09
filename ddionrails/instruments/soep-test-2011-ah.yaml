@@ -1,0 +1,60 @@
+instrument: soep-test-2001-ah
+label: Questionnaire 2001 ah
+period: 2001.0
+questionnaire: soep-test-2001-ah
+questions:
+  income:
+    question: Income
+    sn: 1
+    items:
+        text: "Household Net Income"
+        text_de: "Haushaltsnettoeinkommen"
+        study: soep-test
+        scale: num
+        number: income
+
+  neighbor:
+    question: Neighbor
+    sn: 2
+    items:
+      - item: root
+        sn: 0
+        answer_list: neighbor
+        answers:
+          -
+            label: Res. Area Old
+            label_de: Alte Wohngegend
+            value: 1
+          -
+            label: Res. Area New
+            label_de: Neue Wohngegend
+            value: 2
+          -
+            label: Mixed Resid., Comm. Area
+            label_de: Gemischte Wohngegend
+            value: 3
+          -
+            label: Commercial Area
+            label_de: Vertriebsgegend
+            value: 4
+          -
+            label: Industrial Area
+            label_de: Industriegegend
+            value: 5
+        text: "Neighborhood Of Household"
+        text_de: "Nachbarschaft des Haushalts"
+        study: soep-test
+        scale: cat
+        number: neighbor
+  
+  text:
+    question: Text
+    sn: 3
+    items:
+        text: "Text"
+        text_de: "Text"
+        study: soep-test
+        scale: string
+        number: text
+  
+study: soep-test

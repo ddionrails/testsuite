@@ -20,7 +20,7 @@ class Generations(Dataset):
 
         self.metadata["resources"][0]["schema"]["fields"].append(bmi)
         
-    def splitlong(self):
+    def splitlong(self, stats):
         
         wave = ord("a")
         
@@ -36,8 +36,23 @@ class Generations(Dataset):
             temp.metadata["resources"][0]["path"] = data_name + ".csv"
             
             temp.write_tdp(
-                "04-data-distribution/output/data_in_wide/" + data_name + ".csv",
-                "04-data-distribution/output/data_in_wide/" + data_name + ".json"
+                "03-temp/" + data_name + ".csv",
+                "03-temp/" + data_name + ".json"
             )
+            
+            if stats == "json":
+                temp.write_stats(
+                    "03-temp/" + data_name + "_stats.json"
+                )
+            elif stats == "html":
+                temp.write_stats(
+                    "03-temp/" + data_name + "_stats.html", file_type="html"
+                )
+            elif stats == "yaml":
+                temp.write_stats(
+                    "03-temp/" + data_name + "_stats.yaml", file_type="yaml"
+                )
+            else:
+                print("The format for statistics %s is not supported" % stats)
             
             wave = wave+1

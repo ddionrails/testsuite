@@ -1,0 +1,205 @@
+[
+  {
+    "dataset_cs": "ah",
+    "dataset": "ah",
+    "scale": "num",
+    "name": "hid",
+    "name_cs": "hid",
+    "study": "",
+    "sub_type": "",
+    "period": "",
+    "label": "HID",
+    "variable": "hid",
+    "uni": {
+      "min": 1.0,
+      "density": [
+        0.1368824802594332,
+        0.1406689047504438,
+        0.14400557490221969,
+        0.14689282014395336,
+        0.1493365399854251,
+        0.15134648877429815,
+        0.15293445313884413,
+        0.15411245780254162,
+        0.15489113419958017,
+        0.15527837477710682,
+        0.15527837477710682,
+        0.15489113419958017,
+        0.15411245780254162,
+        0.15293445313884413,
+        0.15134648877429815,
+        0.14933653998542507,
+        0.14689282014395336,
+        0.14400557490221969,
+        0.1406689047504438,
+        0.1368824802594332
+      ],
+      "num_missings": {
+        "values": [],
+        "labels": [],
+        "frequencies": []
+      },
+      "total": 2,
+      "max": 4.0,
+      "valid": 2,
+      "by": 0.1578947368421053,
+      "missing": [
+        0
+      ]
+    },
+    "analysis_unit": ""
+  },
+  {
+    "dataset_cs": "ah",
+    "dataset": "ah",
+    "scale": "num",
+    "name": "wave",
+    "name_cs": "wave",
+    "study": "",
+    "sub_type": "",
+    "period": "",
+    "label": "wave",
+    "variable": "wave",
+    "uni": {
+      "min": 1998.0,
+      "density": [],
+      "num_missings": {
+        "values": [],
+        "labels": [],
+        "frequencies": []
+      },
+      "total": 2,
+      "max": 1998.0,
+      "valid": 2,
+      "by": 0,
+      "missing": [
+        0
+      ]
+    },
+    "analysis_unit": ""
+  },
+  {
+    "dataset_cs": "ah",
+    "dataset": "ah",
+    "scale": "num",
+    "name": "income",
+    "name_cs": "income",
+    "study": "",
+    "sub_type": "",
+    "period": "",
+    "label": "Household Net Income",
+    "variable": "income",
+    "uni": {
+      "min": 450.0,
+      "density": [
+        0.008212948815565993,
+        0.00844013428502663,
+        0.00864033449413318,
+        0.008813569208637202,
+        0.008960192399125506,
+        0.009080789326457887,
+        0.00917606718833065,
+        0.009246747468152497,
+        0.00929346805197481,
+        0.00931670248662641,
+        0.00931670248662641,
+        0.009293468051974809,
+        0.009246747468152497,
+        0.00917606718833065,
+        0.009080789326457887,
+        0.008960192399125506,
+        0.008813569208637202,
+        0.00864033449413318,
+        0.00844013428502663,
+        0.008212948815565993
+      ],
+      "num_missings": {
+        "values": [],
+        "labels": [],
+        "frequencies": []
+      },
+      "total": 2,
+      "max": 500.0,
+      "valid": 2,
+      "by": 2.631578947368439,
+      "missing": [
+        0
+      ]
+    },
+    "analysis_unit": ""
+  },
+  {
+    "dataset_cs": "ah",
+    "dataset": "ah",
+    "scale": "cat",
+    "name": "neighbor",
+    "name_cs": "neighbor",
+    "study": "",
+    "sub_type": "",
+    "period": "",
+    "label": "Neighborhood Of Household",
+    "variable": "neighbor",
+    "uni": {
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "labels": [
+        "Res. Area Old",
+        "Res. Area New",
+        "Mixed Resid., Comm. Area",
+        "Commercial Area",
+        "Industrial Area"
+      ],
+      "frequencies": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "missings": [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    },
+    "analysis_unit": ""
+  },
+  {
+    "dataset_cs": "ah",
+    "dataset": "ah",
+    "scale": "str",
+    "name": "text",
+    "statistics": {
+      "values": [
+        "2",
+        "0"
+      ],
+      "names": [
+        "Valid",
+        "Invalid"
+      ]
+    },
+    "name_cs": "text",
+    "study": "",
+    "sub_type": "",
+    "period": "",
+    "label": "text",
+    "variable": "text",
+    "uni": {
+      "missings": [
+        0
+      ],
+      "frequencies": [
+        2
+      ]
+    },
+    "analysis_unit": ""
+  }
+]

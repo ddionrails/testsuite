@@ -1,0 +1,88 @@
+instrument: soep-test-2001-cp
+label: Questionnaire 2001 cp
+period: 2001.0
+questionnaire: soep-test-2001-cp
+questions:
+  bodyweight:
+    question: Bodyweight
+    sn: 1
+    items:
+        text: "Body weight."
+        text_de: "Körpergewicht"
+        study: soep-test
+        scale: num
+        number: bodyweight
+  
+  bodyheight:
+    question: Bodyheight
+    sn: 2
+    items:
+        text: "Body height."
+        text_de: "Körpergröße"
+        study: soep-test
+        scale: num
+        number: bodyheight
+
+  stat:
+    question: Stat
+    sn: 3
+    items:
+      - item: root
+        sn: 0
+        answer_list: stat
+        answers:
+          -
+            label: Single
+            label_de: Ledig
+            value: 1
+          -
+            label: Married
+            label_de: Verheiratet
+            value: 2
+          -
+            label: Divorced
+            label_de: Geschieden
+            value: 3
+          -
+            label: Widowed
+            label_de: Verwitwet
+            value: 4
+        text: "Relationship status."
+        text_de: "Beziehungsstatus."
+        study: soep-test
+        scale: cat
+        number: stat
+  
+  smo:
+    question: Smo
+    sn: 4
+    items:
+      - item: root
+        sn: 0
+        answer_list: smo
+        answers:
+          -
+            label: Yes
+            label_de: Ja
+            value: 1
+          -
+            label: No
+            label_de: Nein
+            value: 2
+        text: "Smoking?"
+        text_de: "Rauchen?"
+        study: soep-test
+        scale: cat
+        number: smo
+        
+  text:
+    question: Text
+    sn: 5
+    items:
+        text: "Text"
+        text_de: "Text"
+        study: soep-test
+        scale: string
+        number: text
+  
+study: soep-test

@@ -14,4 +14,3 @@ rm -rf 04-data-distribution/output
 mkdir -p 04-data-distribution/output/data
 mkdir -p 04-data-distribution/output/generations
 mkdir -p 04-data-distribution/output/statistics
-mkdir -p 04-data-distribution/output/data_in_wide

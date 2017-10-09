@@ -6,13 +6,12 @@ import re
 sys.path.append(os.path.abspath("../ddi.py"))
 from ddi.dataset import Dataset
 
-def export_data(dataset, testscript):
+def export_data():
 
     print("")
-    print("[Distributon]: Export Data (%s)" % dataset)
+    print("[Distributon]: Export Data")
     
-    file_names = [f for f in listdir("03-temp/") if re.search("^" + dataset + "(\.|\_)", f)]
-    
+    file_names = [f for f in listdir("03-temp/")]
     
     for file_name in file_names:
         if "_stats" in file_name:
@@ -34,25 +33,17 @@ def export_data(dataset, testscript):
                 "04-data-distribution/output/data/" + file_name
             )
                 
-def export_to_ddi(dataset):
+def export_to_ddi():
 
     print("")
-    print("[DDI Export]: Export Statistics from 04-data-distribution/output/statistics/ to ddionrails/datasets/ (%s)" % dataset)
+    print("[DDI Export]: Export Statistics from 04-data-distribution/output/statistics/ to ddionrails/datasets/")
     
-    file_names = [f for f in listdir("04-data-distribution/output/statistics/") if re.search("^" + dataset + "\_stats.json", f)]
-    
-    for file_name in file_names:
-        print("Copy " + file_name + " in ddionrails/datasets/%s.json" % dataset)
-        shutil.copy2(
-            "04-data-distribution/output/statistics/" + file_name,
-            "ddionrails/datasets/" + dataset + ".json"
-        )
-            
-    file_names = [f for f in listdir("04-data-distribution/output/statistics/") if re.search("^" + dataset + "\_gen_stats.json", f)]
+    file_names = [f for f in listdir("04-data-distribution/output/statistics/")]
     
     for file_name in file_names:
-        print("Copy " + file_name + " in ddionrails/datasets/%s_gen.json" % dataset)
+        new_file_name = file_name.replace("_stats", "")
+        print("Copy " + file_name + " in ddionrails/datasets/%s" % new_file_name)
         shutil.copy2(
-            "04-data-distribution/output/statistics/" + file_name,
-            "ddionrails/datasets/" + dataset + "_gen.json"
+        "04-data-distribution/output/statistics/" + file_name,
+        "ddionrails/datasets/" + new_file_name 
         )

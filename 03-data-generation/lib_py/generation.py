@@ -88,7 +88,7 @@ def process(dataset, format, generationscript, splitlong, stats):
     if splitlong == 1:
         print("Export the data in wide format")
         d2 = Generations(d1)
-        d2.splitlong()
+        d2.splitlong(stats)
         
 
     # generations
