@@ -1,3 +1,3 @@
 target_study_name,target_dataset_name,target_release_name,target_variable_name,origin_study_name,origin_dataset_name,origin_release_name,origin_variable_name
-testsuite,test_gen,,bmi,testsuite,test,,body_weight
-testsuite,test_gen,,bmi,testsuite,test,,body_height
+testsuite,pl_gen,,bmi,testsuite,pl,,bodyweight
+testsuite,pl_gen,,bmi,testsuite,pl,,bodyweight
