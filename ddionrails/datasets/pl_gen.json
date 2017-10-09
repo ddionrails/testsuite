@@ -1,9 +1,13 @@
 [
   {
+<<<<<<< HEAD
     "dataset_cs": "pl",
     "dataset": "pl",
     "scale": "num",
     "name": "pid",
+=======
+    "analysis_unit": "",
+>>>>>>> b4f30f7f95fa63f2a5e14025e5df3f1897ecbd6a
     "statistics": {
       "values": [
         "11",
@@ -26,6 +30,7 @@
         "Invalid"
       ]
     },
+<<<<<<< HEAD
     "name_cs": "pid",
     "study": "",
     "sub_type": "",
@@ -34,6 +39,9 @@
     "variable": "pid",
     "uni": {
       "min": 11.0,
+=======
+    "uni": {
+>>>>>>> b4f30f7f95fa63f2a5e14025e5df3f1897ecbd6a
       "density": [
         0.0281303251996439,
         0.030927653683726058,
@@ -62,13 +70,21 @@
         "frequencies": []
       },
       "total": 20,
+<<<<<<< HEAD
       "max": 43.0,
       "valid": 20,
       "by": 1.6842105263157894,
+=======
+      "min": 11.0,
+      "valid": 20,
+      "max": 43.0,
+>>>>>>> b4f30f7f95fa63f2a5e14025e5df3f1897ecbd6a
       "missing": [
         0
-      ]
+      ],
+      "by": 1.6842105263157894
     },
+<<<<<<< HEAD
     "analysis_unit": ""
   },
   {
@@ -76,6 +92,21 @@
     "dataset": "pl",
     "scale": "num",
     "name": "hid",
+=======
+    "name_cs": "pid",
+    "dataset_cs": "pl",
+    "label": "PID",
+    "scale": "num",
+    "dataset": "pl",
+    "sub_type": "",
+    "variable": "pid",
+    "period": "",
+    "name": "pid",
+    "study": ""
+  },
+  {
+    "analysis_unit": "",
+>>>>>>> b4f30f7f95fa63f2a5e14025e5df3f1897ecbd6a
     "statistics": {
       "values": [
         "1",
@@ -98,6 +129,7 @@
         "Invalid"
       ]
     },
+<<<<<<< HEAD
     "name_cs": "hid",
     "study": "",
     "sub_type": "",
@@ -106,6 +138,9 @@
     "variable": "hid",
     "uni": {
       "min": 1.0,
+=======
+    "uni": {
+>>>>>>> b4f30f7f95fa63f2a5e14025e5df3f1897ecbd6a
       "density": [
         0.3150269520192195,
         0.3313286458226011,
@@ -134,13 +169,21 @@
         "frequencies": []
       },
       "total": 20,
+<<<<<<< HEAD
       "max": 4.0,
       "valid": 20,
       "by": 0.1578947368421053,
+=======
+      "min": 1.0,
+      "valid": 20,
+      "max": 4.0,
+>>>>>>> b4f30f7f95fa63f2a5e14025e5df3f1897ecbd6a
       "missing": [
         0
-      ]
+      ],
+      "by": 0.1578947368421053
     },
+<<<<<<< HEAD
     "analysis_unit": ""
   },
   {
@@ -148,6 +191,21 @@
     "dataset": "pl",
     "scale": "num",
     "name": "wave",
+=======
+    "name_cs": "hid",
+    "dataset_cs": "pl",
+    "label": "HID",
+    "scale": "num",
+    "dataset": "pl",
+    "sub_type": "",
+    "variable": "hid",
+    "period": "",
+    "name": "hid",
+    "study": ""
+  },
+  {
+    "analysis_unit": "",
+>>>>>>> b4f30f7f95fa63f2a5e14025e5df3f1897ecbd6a
     "statistics": {
       "values": [
         "1998",
@@ -170,6 +228,7 @@
         "Invalid"
       ]
     },
+<<<<<<< HEAD
     "name_cs": "wave",
     "study": "",
     "sub_type": "",
@@ -178,6 +237,9 @@
     "variable": "wave",
     "uni": {
       "min": 1998.0,
+=======
+    "uni": {
+>>>>>>> b4f30f7f95fa63f2a5e14025e5df3f1897ecbd6a
       "density": [
         0.12216770123739286,
         0.14975428913344704,
@@ -206,13 +268,21 @@
         "frequencies": []
       },
       "total": 20,
+<<<<<<< HEAD
       "max": 2001.0,
       "valid": 20,
       "by": 0.15789473684208133,
+=======
+      "min": 1998.0,
+      "valid": 20,
+      "max": 2001.0,
+>>>>>>> b4f30f7f95fa63f2a5e14025e5df3f1897ecbd6a
       "missing": [
         0
-      ]
+      ],
+      "by": 0.15789473684208133
     },
+<<<<<<< HEAD
     "analysis_unit": ""
   },
   {
@@ -220,14 +290,35 @@
     "dataset": "pl",
     "scale": "num",
     "name": "bodyweight",
+=======
+    "name_cs": "wave",
+    "dataset_cs": "pl",
+    "label": "wave",
+    "scale": "num",
+    "dataset": "pl",
+    "sub_type": "",
+    "variable": "wave",
+    "period": "",
+    "name": "wave",
+    "study": ""
+  },
+  {
+    "analysis_unit": "",
+>>>>>>> b4f30f7f95fa63f2a5e14025e5df3f1897ecbd6a
     "statistics": {
       "values": [
         "2",
         "46.0",
         "69.0",
+<<<<<<< HEAD
         "69.55",
         "95.0",
         "130",
+=======
+        "114.55",
+        "95.0",
+        "1002",
+>>>>>>> b4f30f7f95fa63f2a5e14025e5df3f1897ecbd6a
         "20",
         "0"
       ],
@@ -242,6 +333,7 @@
         "Invalid"
       ]
     },
+<<<<<<< HEAD
     "name_cs": "bodyweight",
     "study": "",
     "sub_type": "",
@@ -250,6 +342,9 @@
     "variable": "bodyweight",
     "uni": {
       "min": 2.0,
+=======
+    "uni": {
+>>>>>>> b4f30f7f95fa63f2a5e14025e5df3f1897ecbd6a
       "density": [
         0.002125889021090495,
         0.0027082299864630197,
@@ -278,13 +373,21 @@
         "frequencies": []
       },
       "total": 20,
+<<<<<<< HEAD
       "max": 130.0,
       "valid": 20,
       "by": 6.7368421052631575,
+=======
+      "min": 2.0,
+      "valid": 20,
+      "max": 1002.0,
+>>>>>>> b4f30f7f95fa63f2a5e14025e5df3f1897ecbd6a
       "missing": [
         0
-      ]
+      ],
+      "by": 52.63157894736842
     },
+<<<<<<< HEAD
     "analysis_unit": ""
   },
   {
@@ -292,6 +395,21 @@
     "dataset": "pl",
     "scale": "num",
     "name": "weight",
+=======
+    "name_cs": "bodyweight",
+    "dataset_cs": "pl",
+    "label": "Body weight.",
+    "scale": "num",
+    "dataset": "pl",
+    "sub_type": "",
+    "variable": "bodyweight",
+    "period": "",
+    "name": "bodyweight",
+    "study": ""
+  },
+  {
+    "analysis_unit": "",
+>>>>>>> b4f30f7f95fa63f2a5e14025e5df3f1897ecbd6a
     "statistics": {
       "values": [
         "0",
@@ -314,6 +432,7 @@
         "Invalid"
       ]
     },
+<<<<<<< HEAD
     "name_cs": "weight",
     "study": "",
     "sub_type": "",
@@ -322,6 +441,9 @@
     "variable": "weight",
     "uni": {
       "min": 0.0,
+=======
+    "uni": {
+>>>>>>> b4f30f7f95fa63f2a5e14025e5df3f1897ecbd6a
       "density": [
         0.09446873279052885,
         0.1071034220936744,
@@ -350,13 +472,21 @@
         "frequencies": []
       },
       "total": 20,
+<<<<<<< HEAD
       "max": 9.0,
       "valid": 20,
       "by": 0.47368421052631576,
+=======
+      "min": 0.0,
+      "valid": 20,
+      "max": 9.0,
+>>>>>>> b4f30f7f95fa63f2a5e14025e5df3f1897ecbd6a
       "missing": [
         0
-      ]
+      ],
+      "by": 0.47368421052631576
     },
+<<<<<<< HEAD
     "analysis_unit": ""
   },
   {
@@ -364,6 +494,21 @@
     "dataset": "pl",
     "scale": "cat",
     "name": "stat",
+=======
+    "name_cs": "weight",
+    "dataset_cs": "pl",
+    "label": "weight",
+    "scale": "num",
+    "dataset": "pl",
+    "sub_type": "",
+    "variable": "weight",
+    "period": "",
+    "name": "weight",
+    "study": ""
+  },
+  {
+    "analysis_unit": "",
+>>>>>>> b4f30f7f95fa63f2a5e14025e5df3f1897ecbd6a
     "statistics": {
       "values": [
         "2.0",
@@ -376,6 +521,7 @@
         "Invalid"
       ]
     },
+<<<<<<< HEAD
     "name_cs": "stat",
     "study": "",
     "sub_type": "",
@@ -388,6 +534,14 @@
         2,
         3,
         4
+=======
+    "uni": {
+      "missings": [
+        "false",
+        "false",
+        "false",
+        "false"
+>>>>>>> b4f30f7f95fa63f2a5e14025e5df3f1897ecbd6a
       ],
       "labels": [
         "Single",
@@ -401,6 +555,7 @@
         2,
         1
       ],
+<<<<<<< HEAD
       "missings": [
         "false",
         "false",
@@ -415,6 +570,28 @@
     "dataset": "pl",
     "scale": "cat",
     "name": "smo",
+=======
+      "values": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "name_cs": "stat",
+    "dataset_cs": "pl",
+    "label": "Relationship status.",
+    "scale": "cat",
+    "dataset": "pl",
+    "sub_type": "",
+    "variable": "stat",
+    "period": "",
+    "name": "stat",
+    "study": ""
+  },
+  {
+    "analysis_unit": "",
+>>>>>>> b4f30f7f95fa63f2a5e14025e5df3f1897ecbd6a
     "statistics": {
       "values": [
         "2.0",
@@ -427,6 +604,7 @@
         "Invalid"
       ]
     },
+<<<<<<< HEAD
     "name_cs": "smo",
     "study": "",
     "sub_type": "",
@@ -437,6 +615,12 @@
       "values": [
         1,
         2
+=======
+    "uni": {
+      "missings": [
+        "false",
+        "false"
+>>>>>>> b4f30f7f95fa63f2a5e14025e5df3f1897ecbd6a
       ],
       "labels": [
         "Yes",
@@ -446,6 +630,7 @@
         6,
         14
       ],
+<<<<<<< HEAD
       "missings": [
         "false",
         "false"
@@ -458,6 +643,26 @@
     "dataset": "pl",
     "scale": "str",
     "name": "text",
+=======
+      "values": [
+        1,
+        2
+      ]
+    },
+    "name_cs": "smo",
+    "dataset_cs": "pl",
+    "label": "Smoking?",
+    "scale": "cat",
+    "dataset": "pl",
+    "sub_type": "",
+    "variable": "smo",
+    "period": "",
+    "name": "smo",
+    "study": ""
+  },
+  {
+    "analysis_unit": "",
+>>>>>>> b4f30f7f95fa63f2a5e14025e5df3f1897ecbd6a
     "statistics": {
       "values": [
         "19",
@@ -468,12 +673,15 @@
         "Invalid"
       ]
     },
+<<<<<<< HEAD
     "name_cs": "text",
     "study": "",
     "sub_type": "",
     "period": "",
     "label": "text",
     "variable": "text",
+=======
+>>>>>>> b4f30f7f95fa63f2a5e14025e5df3f1897ecbd6a
     "uni": {
       "missings": [
         1
@@ -482,6 +690,7 @@
         12
       ]
     },
+<<<<<<< HEAD
     "analysis_unit": ""
   },
   {
@@ -489,14 +698,35 @@
     "dataset": "pl",
     "scale": "num",
     "name": "bmi",
+=======
+    "name_cs": "text",
+    "dataset_cs": "pl",
+    "label": "text",
+    "scale": "str",
+    "dataset": "pl",
+    "sub_type": "",
+    "variable": "text",
+    "period": "",
+    "name": "text",
+    "study": ""
+  },
+  {
+    "analysis_unit": "",
+>>>>>>> b4f30f7f95fa63f2a5e14025e5df3f1897ecbd6a
     "statistics": {
       "values": [
         "0.692041522491",
         "21.9797178131",
         "24.9523666771",
+<<<<<<< HEAD
         "27.2644027478",
         "31.8209342561",
         "80.0",
+=======
+        "41.9582802988",
+        "31.8209342561",
+        "327.183673469",
+>>>>>>> b4f30f7f95fa63f2a5e14025e5df3f1897ecbd6a
         "20",
         "0"
       ],
@@ -511,6 +741,7 @@
         "Invalid"
       ]
     },
+<<<<<<< HEAD
     "name_cs": "bmi",
     "study": "",
     "sub_type": "",
@@ -519,6 +750,9 @@
     "variable": "bmi",
     "uni": {
       "min": 0.6920415224913495,
+=======
+    "uni": {
+>>>>>>> b4f30f7f95fa63f2a5e14025e5df3f1897ecbd6a
       "density": [
         0.0033411719790678936,
         0.0049635854973772535,
@@ -547,13 +781,33 @@
         "frequencies": []
       },
       "total": 20,
+<<<<<<< HEAD
       "max": 80.0,
       "valid": 20,
       "by": 4.174103077763613,
+=======
+      "min": 0.6920415224913495,
+      "valid": 20,
+      "max": 327.18367346938777,
+>>>>>>> b4f30f7f95fa63f2a5e14025e5df3f1897ecbd6a
       "missing": [
         0
-      ]
+      ],
+      "by": 17.18377010246823
     },
+<<<<<<< HEAD
     "analysis_unit": ""
+=======
+    "name_cs": "bmi",
+    "dataset_cs": "pl",
+    "label": "BMI",
+    "scale": "num",
+    "dataset": "pl",
+    "sub_type": "",
+    "variable": "bmi",
+    "period": "",
+    "name": "bmi",
+    "study": ""
+>>>>>>> b4f30f7f95fa63f2a5e14025e5df3f1897ecbd6a
   }
 ]
