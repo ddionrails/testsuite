@@ -1,5 +1,5 @@
 study_name,dataset_name,period_name,analysis_unit_name,conceptual_dataset_name,label,description,boost
-testsuite,hl,long,h,org/net,Household (long),"Dies ist eine Beschreibung, sie darf **Markdown** enthalten.",2
-testsuite,pl,long,p,org/net,Individuals (long),"Dies ist eine Beschreibung, sie darf **Markdown** enthalten.",2
-testsuite,test,long,p,org/net,General test data,,0.5
-testsuite,test_gen,long,p,gen,General test generations,,1
+soep-test,hl,long,h,org/net,Household (long),"Dies ist eine Beschreibung, sie darf **Markdown** enthalten.",2
+soep-test,pl,long,p,org/net,Individuals (long),"Dies ist eine Beschreibung, sie darf **Markdown** enthalten.",2
+soep-test,test,long,p,org/net,General test data,,0.5
+soep-test,test_gen,long,p,gen,General test generations,,1

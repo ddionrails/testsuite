@@ -1,6 +1,6 @@
 ---
-name: testsuite
-label: SOEP Testsuite
+name: soep-test
+label: SOEP Test Study
 config:
 ---
 # SOEP Test Study
