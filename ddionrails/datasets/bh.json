@@ -1,22 +1,17 @@
 [
   {
-    "sub_type": "",
-    "analysis_unit": "",
-    "dataset_cs": "bh",
     "study": "",
-    "scale": "num",
+    "analysis_unit": "",
+    "period": "",
+    "sub_type": "",
+    "dataset": "bh",
+    "dataset_cs": "bh",
+    "variable": "hid",
     "name": "hid",
     "name_cs": "hid",
-    "variable": "hid",
-    "period": "",
     "label": "HID",
-    "dataset": "bh",
+    "scale": "num",
     "uni": {
-      "num_missings": {
-        "frequencies": [],
-        "values": [],
-        "labels": []
-      },
       "density": [
         0.06664451661063683,
         0.07348132399826465,
@@ -39,63 +34,63 @@
         0.08316090048736607,
         0.07542981178950227
       ],
-      "by": 0.42105263157894735,
-      "missing": [
-        0
-      ],
-      "valid": 7,
       "min": 2.0,
       "max": 10.0,
-      "total": 7
-    }
-  },
-  {
-    "sub_type": "",
-    "analysis_unit": "",
-    "dataset_cs": "bh",
-    "study": "",
-    "scale": "num",
-    "name": "wave",
-    "name_cs": "wave",
-    "variable": "wave",
-    "period": "",
-    "label": "wave",
-    "dataset": "bh",
-    "uni": {
-      "num_missings": {
-        "frequencies": [],
-        "values": [],
-        "labels": []
-      },
-      "density": [],
-      "by": 0,
+      "by": 0.42105263157894735,
+      "total": 7,
+      "valid": 7,
       "missing": [
         0
       ],
-      "valid": 7,
-      "min": 1999.0,
-      "max": 1999.0,
-      "total": 7
+      "num_missings": {
+        "frequencies": [],
+        "labels": [],
+        "values": []
+      }
     }
   },
   {
-    "sub_type": "",
-    "analysis_unit": "",
-    "dataset_cs": "bh",
     "study": "",
-    "scale": "num",
-    "name": "income",
-    "name_cs": "income",
-    "variable": "income",
+    "analysis_unit": "",
     "period": "",
-    "label": "Household Net Income",
+    "sub_type": "",
     "dataset": "bh",
+    "dataset_cs": "bh",
+    "variable": "wave",
+    "name": "wave",
+    "name_cs": "wave",
+    "label": "wave",
+    "scale": "num",
     "uni": {
+      "density": [],
+      "min": 1999.0,
+      "max": 1999.0,
+      "by": 0,
+      "total": 7,
+      "valid": 7,
+      "missing": [
+        0
+      ],
       "num_missings": {
         "frequencies": [],
-        "values": [],
-        "labels": []
-      },
+        "labels": [],
+        "values": []
+      }
+    }
+  },
+  {
+    "study": "",
+    "analysis_unit": "",
+    "period": "",
+    "sub_type": "",
+    "dataset": "bh",
+    "dataset_cs": "bh",
+    "variable": "income",
+    "name": "income",
+    "name_cs": "income",
+    "label": "Household Net Income",
+    "scale": "num",
+    "uni": {
       "density": [
         1.3406545193702616e-06,
         1.3175567722417737e-06,
@@ -118,36 +113,34 @@
         2.2028402267601002e-07,
         2.2420974276026857e-07
       ],
+      "min": 20.0,
+      "max": 1000000.0,
       "by": 52630.52631578947,
+      "total": 7,
+      "valid": 7,
       "missing": [
         0
       ],
-      "valid": 7,
-      "min": 20.0,
-      "max": 1000000.0,
-      "total": 7
+      "num_missings": {
+        "frequencies": [],
+        "labels": [],
+        "values": []
+      }
     }
   },
   {
-    "sub_type": "",
-    "analysis_unit": "",
-    "dataset_cs": "bh",
     "study": "",
-    "scale": "cat",
+    "analysis_unit": "",
+    "period": "",
+    "sub_type": "",
+    "dataset": "bh",
+    "dataset_cs": "bh",
+    "variable": "neighbor",
     "name": "neighbor",
     "name_cs": "neighbor",
-    "variable": "neighbor",
-    "period": "",
     "label": "Neighborhood Of Household",
-    "dataset": "bh",
+    "scale": "cat",
     "uni": {
-      "missings": [
-        "false",
-        "false",
-        "false",
-        "false",
-        "false"
-      ],
       "frequencies": [
         2,
         3,
@@ -162,6 +155,13 @@
         4,
         5
       ],
+      "missings": [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
       "labels": [
         "Res. Area Old",
         "Res. Area New",
@@ -172,33 +172,33 @@
     }
   },
   {
-    "sub_type": "",
-    "analysis_unit": "",
-    "dataset_cs": "bh",
     "study": "",
-    "scale": "str",
+    "analysis_unit": "",
+    "period": "",
+    "sub_type": "",
+    "dataset": "bh",
+    "dataset_cs": "bh",
+    "variable": "text",
     "name": "text",
     "name_cs": "text",
-    "variable": "text",
-    "period": "",
     "label": "text",
-    "dataset": "bh",
+    "scale": "str",
     "uni": {
-      "missings": [
-        1
-      ],
       "frequencies": [
         5
+      ],
+      "missings": [
+        1
       ]
     },
     "statistics": {
-      "values": [
-        "5",
-        "2"
-      ],
       "names": [
         "Valid",
         "Invalid"
+      ],
+      "values": [
+        "5",
+        "2"
       ]
     }
   }
