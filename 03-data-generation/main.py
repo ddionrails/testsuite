@@ -5,6 +5,9 @@ import os, sys, csv
 
 from lib_py.generation import *
 
+sys.path.append(os.path.abspath("."))
+from metatest.cross_file_test import Crosstest
+
 metadata = pd.read_csv("./metadata.csv", delimiter=",", header = 0)
 
 for index, row in metadata.iterrows():
@@ -27,3 +30,5 @@ for index, row in metadata.iterrows():
         dataset=row["dataset"],
         testscript=row["testscript"]
     )
+    
+Crosstest()

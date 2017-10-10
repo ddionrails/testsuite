@@ -45,7 +45,19 @@ class Metatest(Dataset):
         
     def metatest_values(self):
         print("Testing Values...")
-        
+        for var in self.metadata["resources"][0]["schema"]["fields"]:
+            if var["type"] == "cat":
+                for val in var["values"]:
+                    if val["value"] == var["min"]:
+                        try:
+                            assert val["label"] != "", "[Error]: The value %i of variable %s has not a label" % (var["min"], var["name"])
+                        except Exception as error:
+                            print(error)
+                    if val["value"] == var["max"]:
+                        try:
+                            assert val["label"] != "", "[Error]: The value %i of variable %s has not a label" % (var["max"], var["name"])
+                        except Exception as error:
+                            print(error)
         print("...check")
         
     def metatest_type(self):
@@ -60,8 +72,4 @@ class Metatest(Dataset):
                         print(error)
                         break
                         
-        print("...check")
-        
-    def metatest_foreign_key(self):
-        print("Testing Foreign Keys...")
         print("...check")
