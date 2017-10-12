@@ -1,4 +1,7 @@
 import os,sys
+import json
+import re
+from collections import OrderedDict
 
 sys.path.append(os.path.abspath("."))
 from metatest.test import Metatest
@@ -34,6 +37,34 @@ def export_data(dataset, format, testscript):
         "01-temp/" + dataset + ".csv", 
         "01-temp/" + dataset + ".json"
     )
+    
+    # Write primary keys and foreign keys in a file for crossfile tests
+    try:
+        with open("metatest/temp/keys.json") as json_data:
+            keys = json.load(json_data)        
+    except:
+        keys = OrderedDict()
+        keys["primary_keys"] = OrderedDict()
+        keys["foreign_keys"] = OrderedDict()
+        
+    for var in d1.metadata["resources"][0]["schema"]["fields"]:
+        
+        if var.get("primary_key", "false") is not "false":
+            values = [ int(i) for i in d1.dataset[var["name"]].unique() ]
+            keys["primary_keys"][d1.metadata["name"]] = dict()
+            keys["primary_keys"][d1.metadata["name"]][var["name"]] = dict(
+                    values = values,
+                )
+        if var.get("foreign_key", "false") is not "false":
+            values = [ int(i) for i in d1.dataset[var["name"]].unique() ]
+            keys["foreign_keys"][d1.metadata["name"]] = dict()
+            keys["foreign_keys"][d1.metadata["name"]][var["name"]] = dict(
+                    target = re.search('(.*)\/', var["foreign_key"]).group(1),
+                    primary_key = re.search('.*\/(.*)', var["foreign_key"]).group(1),
+                    values = values,
+                )
+    with open("metatest/temp/keys.json", "w") as outfile:
+            json.dump(keys, outfile, indent=2)
 
 def main():
     pass  
