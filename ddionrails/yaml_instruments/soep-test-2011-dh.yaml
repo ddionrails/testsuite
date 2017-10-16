@@ -7,7 +7,7 @@ questions:
     question: Income
     sn: 1
     items:
-        text: "Household Net Income"
+      - text: "Household Net Income"
         text_de: "Haushaltsnettoeinkommen"
         study: soep-test
         scale: num
@@ -51,7 +51,7 @@ questions:
     question: Text
     sn: 3
     items:
-        text: "Text"
+      - text: "Text"
         text_de: "Text"
         study: soep-test
         scale: string
