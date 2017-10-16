@@ -55,6 +55,10 @@ class Generations(Dataset):
                 temp.write_stats(
                     "03-temp/" + data_name + "_stats.yaml", file_type="yaml"
                 )
+            elif stats == "md":
+                temp.write_stats(
+                    "03-temp/" + data_name + "_stats.md", file_type="md"
+                )
             else:
                 print("The format for statistics %s is not supported" % stats)
             

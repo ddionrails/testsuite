@@ -82,6 +82,10 @@ def process(dataset, format, generationscript, splitlong, stats):
         d1.write_stats(
             "03-data-generation/output/" + dataset + "_stats.yaml", file_type="yaml"
         )
+    elif stats == "md":
+        d1.write_stats(
+            "03-data-generation/output/" + dataset + "_stats.md", file_type="md"
+        )    
     else:
         print("The format for statistics %s is not supported" % stats)
 
@@ -125,6 +129,10 @@ def process(dataset, format, generationscript, splitlong, stats):
         elif stats == "yaml":
             d1.write_stats(
                 "03-data-generation/output/" + dataset + "_gen_stats.yaml", file_type="yaml"
+            )
+        elif stats == "md":
+            d1.write_stats(
+                "03-data-generation/output/" + dataset + "_gen_stats.md", file_type="md"
             )
         else:
             print("The format for statistics %s is not supported" % stats)
