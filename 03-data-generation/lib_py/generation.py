@@ -5,6 +5,7 @@ import re
 
 sys.path.append(os.path.abspath("."))
 from metatest.test import Metatest
+from metatest.cross_file_test import Crosstest
 
 from lib_py.generation_scripts import Generations
 
@@ -84,6 +85,8 @@ def process(dataset, format, generationscript, splitlong, stats):
     else:
         print("The format for statistics %s is not supported" % stats)
 
+    Crosstest.preparation(d1)
+
     # split long dataset
     if splitlong == 1:
         print("Export the data in wide format")
@@ -125,7 +128,8 @@ def process(dataset, format, generationscript, splitlong, stats):
             )
         else:
             print("The format for statistics %s is not supported" % stats)
-            
+      
+        Crosstest.preparation(d1)      
       
 def export_data(dataset, testscript):
 

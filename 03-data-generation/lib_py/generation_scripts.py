@@ -3,6 +3,9 @@ import re, os,sys
 sys.path.append(os.path.abspath("../ddi.py"))
 from ddi.dataset import Dataset
 
+sys.path.append(os.path.abspath("."))
+from metatest.cross_file_test import Crosstest
+
 class Generations(Dataset):
 
     def __init__(self, dataset):
@@ -54,5 +57,7 @@ class Generations(Dataset):
                 )
             else:
                 print("The format for statistics %s is not supported" % stats)
+            
+            Crosstest.preparation(temp)
             
             wave = wave+1

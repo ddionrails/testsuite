@@ -5,6 +5,7 @@ from metatest.test import Metatest
 
 sys.path.append(os.path.abspath("../ddi.py"))
 from ddi.dataset import Dataset
+from metatest.cross_file_test import Crosstest
 
 
 def import_data(dataset, format, testscript):
@@ -95,6 +96,8 @@ def export_data(dataset, format, testscript):
         "02-temp/" + dataset + ".csv", 
         "02-temp/" + dataset + ".json"
     )
+    
+    Crosstest.preparation(d1)
 
     
 def main():
