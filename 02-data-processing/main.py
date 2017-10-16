@@ -30,4 +30,4 @@ for index, row in metadata.iterrows():
         testscript=row["testscript"]
     )
     
-Crosstest()
+Crosstest.run()

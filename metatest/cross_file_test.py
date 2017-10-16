@@ -5,12 +5,15 @@ import re
 from collections import OrderedDict
 
 class Crosstest():
-    def __init__(self):
-        for i in dir(self):
+
+    @classmethod
+    def run(cls):
+        for i in dir(cls):
             if i.startswith('crosstest'):
-                result = getattr(self, i)()
+                result = getattr(cls, i)()
                
-    def crosstest_01_foreign_key(self):
+    @classmethod
+    def crosstest_01_foreign_key(cls):
         print("Testing Foreign Keys...")
         with open("metatest/temp/keys.json") as json_data:
             keys = json.load(json_data)
@@ -20,20 +23,24 @@ class Crosstest():
                 foreign_key = keys["foreign_keys"][dataset][key]["primary_key"]
                 foreign_dataset = keys["foreign_keys"][dataset][key]["target"]
                 try:
-                    assert foreign_dataset in keys["primary_keys"], "[ERROR]: The dataset %s doesn't exist." % foreign_dataset 
-                    assert foreign_key in keys["primary_keys"][foreign_dataset], "[ERROR]: The primary key %s in %s doesn't exist." % (foreign_key, foreign_dataset)   
+                    assert foreign_dataset in keys["primary_keys"],\
+                        "[ERROR]: The dataset %s doesn't exist." % foreign_dataset 
+                    assert foreign_key in keys["primary_keys"][foreign_dataset],\
+                        "[ERROR]: The primary key %s in %s doesn't exist." % (
+                            foreign_key, foreign_dataset
+                         )   
                 except Exception as error:
                     print(error)
         
         print("...check")
     
-
-    def crosstest_99_clean_temp(self):
+    @classmethod
+    def crosstest_99_clean_temp(cls):
         print("Clean metadata/temp/")
         os.system("sh metatest/clean_temp.sh")
 
-        
-    def preparation(dataset):
+    @classmethod
+    def preparation(cls, dataset):
         # Write primary keys and foreign keys in a file for crossfile tests
         try:
             with open("metatest/temp/keys.json") as json_data:
