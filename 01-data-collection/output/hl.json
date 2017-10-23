@@ -1,5 +1,9 @@
 {
   "name": "hl",
+  "period": 2001,
+  "analysis_unit": "h",
+  "conceptual_dataset": "net-long",
+  "boost": 1,
   "resources": [
     {
       "path": "hl.csv",

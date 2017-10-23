@@ -1,5 +1,9 @@
 {
   "name": "pl",
+  "period": 2001,
+  "analysis_unit": "p",
+  "conceptual_dataset": "net-long",
+  "boost": 1,
   "resources": [
     {
       "path": "pl.csv",
