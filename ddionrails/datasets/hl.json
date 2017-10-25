@@ -1,10 +1,10 @@
 [
   {
-    "study": "",
+    "study": "soep-test",
     "analysis_unit": "h",
     "period": 2001,
-    "conceptual_dataset": "net-long",
-    "sub_type": "",
+    "conceptual_dataset": "net",
+    "sub_type": "net",
     "boost": 1,
     "dataset": "hl",
     "dataset_cs": "hl",
@@ -74,11 +74,11 @@
     }
   },
   {
-    "study": "",
+    "study": "soep-test",
     "analysis_unit": "h",
     "period": 2001,
-    "conceptual_dataset": "net-long",
-    "sub_type": "",
+    "conceptual_dataset": "net",
+    "sub_type": "net",
     "boost": 1,
     "dataset": "hl",
     "dataset_cs": "hl",
@@ -148,11 +148,11 @@
     }
   },
   {
-    "study": "",
+    "study": "soep-test",
     "analysis_unit": "h",
     "period": 2001,
-    "conceptual_dataset": "net-long",
-    "sub_type": "",
+    "conceptual_dataset": "net",
+    "sub_type": "net",
     "boost": 1,
     "dataset": "hl",
     "dataset_cs": "hl",
@@ -222,11 +222,11 @@
     }
   },
   {
-    "study": "",
+    "study": "soep-test",
     "analysis_unit": "h",
     "period": 2001,
-    "conceptual_dataset": "net-long",
-    "sub_type": "",
+    "conceptual_dataset": "net",
+    "sub_type": "net",
     "boost": 1,
     "dataset": "hl",
     "dataset_cs": "hl",
@@ -279,11 +279,11 @@
     }
   },
   {
-    "study": "",
+    "study": "soep-test",
     "analysis_unit": "h",
     "period": 2001,
-    "conceptual_dataset": "net-long",
-    "sub_type": "",
+    "conceptual_dataset": "net",
+    "sub_type": "net",
     "boost": 1,
     "dataset": "hl",
     "dataset_cs": "hl",
