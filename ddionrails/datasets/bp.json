@@ -1,0 +1,400 @@
+[
+  {
+    "study": "soep-test",
+    "analysis_unit": "p",
+    "period": 2001,
+    "conceptual_dataset": "net-long",
+    "sub_type": "net-long",
+    "boost": 1,
+    "dataset": "bp",
+    "dataset_cs": "bp",
+    "variable": "pid",
+    "name": "pid",
+    "name_cs": "pid",
+    "label": "PID",
+    "scale": "num",
+    "uni": {
+      "density": [
+        0.04055221410877598,
+        0.04283621412139736,
+        0.04415103889701777,
+        0.044573496125267724,
+        0.04431142118497316,
+        0.04367480707422748,
+        0.043025794099818,
+        0.0427157981403536,
+        0.04302119658893697,
+        0.04408984835983095,
+        0.04590904235792231,
+        0.048301534162793855,
+        0.05095092099546608,
+        0.05345184243670394,
+        0.05537561804949457,
+        0.0563390217652774,
+        0.05606359531369658,
+        0.05441525430028028,
+        0.05141833540070669,
+        0.047243581490400144
+      ],
+      "min": 11.0,
+      "max": 25.0,
+      "by": 0.7368421052631575,
+      "total": 7,
+      "valid": 7,
+      "missing": [
+        0
+      ],
+      "num_missings": {
+        "frequencies": [],
+        "labels": [],
+        "values": []
+      }
+    }
+  },
+  {
+    "study": "soep-test",
+    "analysis_unit": "p",
+    "period": 2001,
+    "conceptual_dataset": "net-long",
+    "sub_type": "net-long",
+    "boost": 1,
+    "dataset": "bp",
+    "dataset_cs": "bp",
+    "variable": "hid",
+    "name": "hid",
+    "name_cs": "hid",
+    "label": "HID",
+    "scale": "num",
+    "uni": {
+      "density": [
+        0.48597022785149524,
+        0.48766600538437155,
+        0.4823013178814595,
+        0.47144185113477466,
+        0.457194621501487,
+        0.44201741195076105,
+        0.42848081783491426,
+        0.41900760134020665,
+        0.41561705214324324,
+        0.4197019475047505,
+        0.43186269750935086,
+        0.45181776070340696,
+        0.478401936544129,
+        0.5096552677244964,
+        0.5429957054918395,
+        0.5754592574497162,
+        0.6039830901685032,
+        0.6257011532706204,
+        0.6382194125680599,
+        0.6398394789780087
+      ],
+      "min": 1.0,
+      "max": 2.0,
+      "by": 0.05263157894736836,
+      "total": 7,
+      "valid": 7,
+      "missing": [
+        0
+      ],
+      "num_missings": {
+        "frequencies": [],
+        "labels": [],
+        "values": []
+      }
+    }
+  },
+  {
+    "study": "soep-test",
+    "analysis_unit": "p",
+    "period": 2001,
+    "conceptual_dataset": "net-long",
+    "sub_type": "net-long",
+    "boost": 1,
+    "dataset": "bp",
+    "dataset_cs": "bp",
+    "variable": "wave",
+    "name": "wave",
+    "name_cs": "wave",
+    "label": "wave",
+    "scale": "num",
+    "uni": {
+      "density": [],
+      "min": 1999.0,
+      "max": 1999.0,
+      "by": 0,
+      "total": 7,
+      "valid": 7,
+      "missing": [
+        0
+      ],
+      "num_missings": {
+        "frequencies": [],
+        "labels": [],
+        "values": []
+      }
+    }
+  },
+  {
+    "study": "soep-test",
+    "analysis_unit": "p",
+    "period": 2001,
+    "conceptual_dataset": "net-long",
+    "sub_type": "net-long",
+    "boost": 1,
+    "dataset": "bp",
+    "dataset_cs": "bp",
+    "variable": "bodyweight",
+    "name": "bodyweight",
+    "name_cs": "bodyweight",
+    "label": "Body weight.",
+    "scale": "num",
+    "uni": {
+      "density": [
+        0.003184528950696886,
+        0.003487596444033993,
+        0.003783891759770205,
+        0.004093324077858549,
+        0.004437425091407509,
+        0.00483439270441668,
+        0.005295241831190967,
+        0.005821854038275501,
+        0.006406930171129321,
+        0.00703518315401022,
+        0.007684828747488827,
+        0.008328619205832815,
+        0.008934203682611087,
+        0.009464247247837128,
+        0.009877217688438262,
+        0.010129824831349435,
+        0.010181665662944208,
+        0.010001772624203467,
+        0.009575768814489292,
+        0.008911620848390324
+      ],
+      "min": 2.0,
+      "max": 100.0,
+      "by": 5.157894736842105,
+      "total": 7,
+      "valid": 7,
+      "missing": [
+        0
+      ],
+      "num_missings": {
+        "frequencies": [],
+        "labels": [],
+        "values": []
+      }
+    }
+  },
+  {
+    "study": "soep-test",
+    "analysis_unit": "p",
+    "period": 2001,
+    "conceptual_dataset": "net-long",
+    "sub_type": "net-long",
+    "boost": 1,
+    "dataset": "bp",
+    "dataset_cs": "bp",
+    "variable": "bodyheight",
+    "name": "bodyheight",
+    "name_cs": "bodyheight",
+    "label": "Body height.",
+    "scale": "num",
+    "uni": {
+      "density": [
+        0.007039168778787413,
+        0.007922307539542954,
+        0.008769754386362558,
+        0.009605437006174854,
+        0.010462468670189465,
+        0.011369785627709919,
+        0.012338111880524553,
+        0.013349536294495996,
+        0.014354371525053014,
+        0.015277010033977871,
+        0.016029629543163674,
+        0.016529812715181825,
+        0.016716654590987614,
+        0.016560560377647394,
+        0.016064540465871233,
+        0.015258208471686595,
+        0.014188246642186332,
+        0.012909640786203417,
+        0.011480439086215266,
+        0.009960196259526424
+      ],
+      "min": 140.0,
+      "max": 200.0,
+      "by": 3.1578947368421098,
+      "total": 7,
+      "valid": 7,
+      "missing": [
+        0
+      ],
+      "num_missings": {
+        "frequencies": [],
+        "labels": [],
+        "values": []
+      }
+    }
+  },
+  {
+    "study": "soep-test",
+    "analysis_unit": "p",
+    "period": 2001,
+    "conceptual_dataset": "net-long",
+    "sub_type": "net-long",
+    "boost": 1,
+    "dataset": "bp",
+    "dataset_cs": "bp",
+    "variable": "weight",
+    "name": "weight",
+    "name_cs": "weight",
+    "label": "weight",
+    "scale": "num",
+    "uni": {
+      "density": [
+        0.07631109543117401,
+        0.08106443164043002,
+        0.08439433910573359,
+        0.08647155098060075,
+        0.08761109950606082,
+        0.08820518018831332,
+        0.0886439766925549,
+        0.08924029757050343,
+        0.09017181769828794,
+        0.09145025584113817,
+        0.09292131272200639,
+        0.0942937472799956,
+        0.09519130485728913,
+        0.09521780411115481,
+        0.09402393235342646,
+        0.09136450492921706,
+        0.08713716966850338,
+        0.081397388075817,
+        0.07434914120654551,
+        0.06631510344488291
+      ],
+      "min": 1.0,
+      "max": 9.0,
+      "by": 0.42105263157894735,
+      "total": 7,
+      "valid": 7,
+      "missing": [
+        0
+      ],
+      "num_missings": {
+        "frequencies": [],
+        "labels": [],
+        "values": []
+      }
+    }
+  },
+  {
+    "study": "soep-test",
+    "analysis_unit": "p",
+    "period": 2001,
+    "conceptual_dataset": "net-long",
+    "sub_type": "net-long",
+    "boost": 1,
+    "dataset": "bp",
+    "dataset_cs": "bp",
+    "variable": "stat",
+    "name": "stat",
+    "name_cs": "stat",
+    "label": "Relationship status.",
+    "scale": "cat",
+    "uni": {
+      "frequencies": [
+        4,
+        2,
+        1,
+        0
+      ],
+      "values": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "missings": [
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      "labels": [
+        "Single",
+        "Married",
+        "Divorced",
+        "Widowed"
+      ]
+    }
+  },
+  {
+    "study": "soep-test",
+    "analysis_unit": "p",
+    "period": 2001,
+    "conceptual_dataset": "net-long",
+    "sub_type": "net-long",
+    "boost": 1,
+    "dataset": "bp",
+    "dataset_cs": "bp",
+    "variable": "smo",
+    "name": "smo",
+    "name_cs": "smo",
+    "label": "Smoking?",
+    "scale": "cat",
+    "uni": {
+      "frequencies": [
+        3,
+        4
+      ],
+      "values": [
+        1,
+        2
+      ],
+      "missings": [
+        "false",
+        "false"
+      ],
+      "labels": [
+        "Yes",
+        "No"
+      ]
+    }
+  },
+  {
+    "study": "soep-test",
+    "analysis_unit": "p",
+    "period": 2001,
+    "conceptual_dataset": "net-long",
+    "sub_type": "net-long",
+    "boost": 1,
+    "dataset": "bp",
+    "dataset_cs": "bp",
+    "variable": "text",
+    "name": "text",
+    "name_cs": "text",
+    "label": "text",
+    "scale": "str",
+    "uni": {
+      "frequencies": [
+        7
+      ],
+      "missings": [
+        0
+      ]
+    },
+    "statistics": {
+      "names": [
+        "Valid",
+        "Invalid"
+      ],
+      "values": [
+        "7",
+        "0"
+      ]
+    }
+  }
+]

@@ -1,0 +1,215 @@
+[
+  {
+    "study": "soep-test",
+    "analysis_unit": "h",
+    "period": 2001,
+    "conceptual_dataset": "net-long",
+    "sub_type": "net-long",
+    "boost": 1,
+    "dataset": "bh",
+    "dataset_cs": "bh",
+    "variable": "hid",
+    "name": "hid",
+    "name_cs": "hid",
+    "label": "HID",
+    "scale": "num",
+    "uni": {
+      "density": [
+        0.06664451661063683,
+        0.07348132399826465,
+        0.0792880375154263,
+        0.08400592731295427,
+        0.08769351564008789,
+        0.09049457191767933,
+        0.09259879578056245,
+        0.0942050518240487,
+        0.0954918047403903,
+        0.09659384261203184,
+        0.09758182178917142,
+        0.09844302167850828,
+        0.09906659193184102,
+        0.09924113950492323,
+        0.09867330106690422,
+        0.09703145032845012,
+        0.0940102120325155,
+        0.08940254840531854,
+        0.08316090048736607,
+        0.07542981178950227
+      ],
+      "min": 2.0,
+      "max": 10.0,
+      "by": 0.42105263157894735,
+      "total": 7,
+      "valid": 7,
+      "missing": [
+        0
+      ],
+      "num_missings": {
+        "frequencies": [],
+        "labels": [],
+        "values": []
+      }
+    }
+  },
+  {
+    "study": "soep-test",
+    "analysis_unit": "h",
+    "period": 2001,
+    "conceptual_dataset": "net-long",
+    "sub_type": "net-long",
+    "boost": 1,
+    "dataset": "bh",
+    "dataset_cs": "bh",
+    "variable": "wave",
+    "name": "wave",
+    "name_cs": "wave",
+    "label": "wave",
+    "scale": "num",
+    "uni": {
+      "density": [],
+      "min": 1999.0,
+      "max": 1999.0,
+      "by": 0,
+      "total": 7,
+      "valid": 7,
+      "missing": [
+        0
+      ],
+      "num_missings": {
+        "frequencies": [],
+        "labels": [],
+        "values": []
+      }
+    }
+  },
+  {
+    "study": "soep-test",
+    "analysis_unit": "h",
+    "period": 2001,
+    "conceptual_dataset": "net-long",
+    "sub_type": "net-long",
+    "boost": 1,
+    "dataset": "bh",
+    "dataset_cs": "bh",
+    "variable": "income",
+    "name": "income",
+    "name_cs": "income",
+    "label": "Household Net Income",
+    "scale": "num",
+    "uni": {
+      "density": [
+        1.3406545193702616e-06,
+        1.3175567722417737e-06,
+        1.2410171484799274e-06,
+        1.12048239591235e-06,
+        9.700438056303158e-07,
+        8.058409525564157e-07,
+        6.433880357129848e-07,
+        4.954363683750107e-07,
+        3.707453792014442e-07,
+        2.738222658827038e-07,
+        2.0542478540234003e-07,
+        1.634819345953334e-07,
+        1.4409104261300257e-07,
+        1.4235910214395405e-07,
+        1.530042739210036e-07,
+        1.70756329817259e-07,
+        1.9065370700170707e-07,
+        2.083247084959872e-07,
+        2.2028402267601002e-07,
+        2.2420974276026857e-07
+      ],
+      "min": 20.0,
+      "max": 1000000.0,
+      "by": 52630.52631578947,
+      "total": 7,
+      "valid": 7,
+      "missing": [
+        0
+      ],
+      "num_missings": {
+        "frequencies": [],
+        "labels": [],
+        "values": []
+      }
+    }
+  },
+  {
+    "study": "soep-test",
+    "analysis_unit": "h",
+    "period": 2001,
+    "conceptual_dataset": "net-long",
+    "sub_type": "net-long",
+    "boost": 1,
+    "dataset": "bh",
+    "dataset_cs": "bh",
+    "variable": "neighbor",
+    "name": "neighbor",
+    "name_cs": "neighbor",
+    "label": "Neighborhood Of Household",
+    "scale": "cat",
+    "uni": {
+      "frequencies": [
+        2,
+        3,
+        1,
+        0,
+        1
+      ],
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "missings": [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      "labels": [
+        "Res. Area Old",
+        "Res. Area New",
+        "Mixed Resid., Comm. Area",
+        "Commercial Area",
+        "Industrial Area"
+      ]
+    }
+  },
+  {
+    "study": "soep-test",
+    "analysis_unit": "h",
+    "period": 2001,
+    "conceptual_dataset": "net-long",
+    "sub_type": "net-long",
+    "boost": 1,
+    "dataset": "bh",
+    "dataset_cs": "bh",
+    "variable": "text",
+    "name": "text",
+    "name_cs": "text",
+    "label": "text",
+    "scale": "str",
+    "uni": {
+      "frequencies": [
+        5
+      ],
+      "missings": [
+        1
+      ]
+    },
+    "statistics": {
+      "names": [
+        "Valid",
+        "Invalid"
+      ],
+      "values": [
+        "5",
+        "2"
+      ]
+    }
+  }
+]

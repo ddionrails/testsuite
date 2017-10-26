@@ -1,8 +1,10 @@
 {
   "name": "pl",
+  "study": "soep-test",
   "period": 2001,
   "analysis_unit": "p",
   "conceptual_dataset": "net-long",
+  "sub_type": "net-long",
   "boost": 1,
   "resources": [
     {
