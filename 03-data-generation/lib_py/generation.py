@@ -61,10 +61,28 @@ def process(dataset, format, generationscript, splitlong, stats):
         print("[ERROR]: Wrong format: %s for %s" % (format, dataset))
     
     d2 = Metatest(d1)
+    
+    ################### Error Log ###################
+    log_file = "metatest/log/test.log"
+    with open(log_file) as l:
+        log_temp = l.readlines()
+    log = dict()
+    for line in log_temp:
+        matchObj = re.search( r'(WARNING:metatest.test:)(..)(: \[Error\]: )(.*)', line)
+        if matchObj:
+            try:
+                log[matchObj.group(2)] = matchObj.group(4)
+            except:
+                pass
+        else:
+            print("No match!!")
+    #################################################
+    
     d1.write_tdp(
         "03-data-generation/output/" + dataset + ".csv", 
         "03-data-generation/output/" + dataset + ".json"
     )
+    
     d1.write_stata(
         "03-data-generation/output/" + dataset + ".do"
     )
@@ -72,19 +90,23 @@ def process(dataset, format, generationscript, splitlong, stats):
     #statistics before generations
     if stats == "json":
         d1.write_stats(
-            "03-data-generation/output/" + dataset + "_stats.json"
+            "03-data-generation/output/" + dataset + "_stats.json", 
+            log=log
         )
     elif stats == "html":
         d1.write_stats(
-            "03-data-generation/output/" + dataset + "_stats.html", file_type="html"
+            "03-data-generation/output/" + dataset + "_stats.html", file_type="html", 
+            log=log
         )
     elif stats == "yaml":
         d1.write_stats(
-            "03-data-generation/output/" + dataset + "_stats.yaml", file_type="yaml"
+            "03-data-generation/output/" + dataset + "_stats.yaml", file_type="yaml", 
+            log=log
         )
     elif stats == "md":
         d1.write_stats(
-            "03-data-generation/output/" + dataset + "_stats.md", file_type="md"
+            "03-data-generation/output/" + dataset + "_stats.md", file_type="md", 
+            log=log
         )    
     else:
         print("The format for statistics %s is not supported" % stats)
@@ -120,19 +142,26 @@ def process(dataset, format, generationscript, splitlong, stats):
         #statistics after generations
         if stats == "json":
             d1.write_stats(
-                "03-data-generation/output/" + dataset + "_gen_stats.json"
+                "03-data-generation/output/" + dataset + "_gen_stats.json", 
+                log=log
             )
         elif stats == "html":
             d1.write_stats(
-                "03-data-generation/output/" + dataset + "_gen_stats.html", file_type="html"
+                "03-data-generation/output/" + dataset + "_gen_stats.html",
+                file_type="html", 
+                log=log
             )
         elif stats == "yaml":
             d1.write_stats(
-                "03-data-generation/output/" + dataset + "_gen_stats.yaml", file_type="yaml"
+                "03-data-generation/output/" + dataset + "_gen_stats.yaml", 
+                file_type="yaml", 
+                log=log
             )
         elif stats == "md":
             d1.write_stats(
-                "03-data-generation/output/" + dataset + "_gen_stats.md", file_type="md"
+                "03-data-generation/output/" + dataset + "_gen_stats.md", 
+                file_type="md", 
+                log=log
             )
         else:
             print("The format for statistics %s is not supported" % stats)
