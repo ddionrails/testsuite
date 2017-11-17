@@ -49,7 +49,8 @@
         "labels": [],
         "values": []
       }
-    }
+    },
+    "error": "No Errors"
   },
   {
     "study": "soep-test",
@@ -80,7 +81,8 @@
         "labels": [],
         "values": []
       }
-    }
+    },
+    "error": "No Errors"
   },
   {
     "study": "soep-test",
@@ -132,7 +134,8 @@
         "labels": [],
         "values": []
       }
-    }
+    },
+    "error": "No Errors"
   },
   {
     "study": "soep-test",
@@ -177,7 +180,8 @@
         "Commercial Area",
         "Industrial Area"
       ]
-    }
+    },
+    "error": "No Errors"
   },
   {
     "study": "soep-test",
@@ -201,6 +205,7 @@
         0
       ]
     },
+    "error": "No Errors",
     "statistics": {
       "names": [
         "Valid",

@@ -49,7 +49,8 @@
         "labels": [],
         "values": []
       }
-    }
+    },
+    "error": "No Errors"
   },
   {
     "study": "soep-test",
@@ -101,7 +102,8 @@
         "labels": [],
         "values": []
       }
-    }
+    },
+    "error": "No Errors"
   },
   {
     "study": "soep-test",
@@ -132,7 +134,8 @@
         "labels": [],
         "values": []
       }
-    }
+    },
+    "error": "No Errors"
   },
   {
     "study": "soep-test",
@@ -184,7 +187,8 @@
         "labels": [],
         "values": []
       }
-    }
+    },
+    "error": "No Errors"
   },
   {
     "study": "soep-test",
@@ -236,7 +240,8 @@
         "labels": [],
         "values": []
       }
-    }
+    },
+    "error": "No Errors"
   },
   {
     "study": "soep-test",
@@ -288,7 +293,8 @@
         "labels": [],
         "values": []
       }
-    }
+    },
+    "error": "No Errors"
   },
   {
     "study": "soep-test",
@@ -329,7 +335,8 @@
         "Divorced",
         "Widowed"
       ]
-    }
+    },
+    "error": "No Errors"
   },
   {
     "study": "soep-test",
@@ -362,7 +369,8 @@
         "Yes",
         "No"
       ]
-    }
+    },
+    "error": "No Errors"
   },
   {
     "study": "soep-test",
@@ -386,6 +394,7 @@
         0
       ]
     },
+    "error": "No Errors",
     "statistics": {
       "names": [
         "Valid",
