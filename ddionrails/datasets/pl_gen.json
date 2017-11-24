@@ -402,10 +402,10 @@
         4
       ],
       "missings": [
-        "false",
-        "false",
-        "false",
-        "false"
+        "False",
+        "False",
+        "False",
+        "False"
       ],
       "labels": [
         "Single",
@@ -452,8 +452,8 @@
         2
       ],
       "missings": [
-        "false",
-        "false"
+        "False",
+        "False"
       ],
       "labels": [
         "Yes",

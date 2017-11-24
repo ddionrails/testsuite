@@ -43,7 +43,11 @@ def export_to_ddi():
     for file_name in file_names:
         new_file_name = file_name.replace("_stats", "")
         print("Copy " + file_name + " in ddionrails/datasets/%s" % new_file_name)
+        if file_name.endswith("json"):
+            output_path = "ddionrails/datasets/"
+        else:
+            output_path = "graphite/"
         shutil.copy2(
         "04-data-distribution/output/statistics/" + file_name,
-        "ddionrails/datasets/" + new_file_name 
+        output_path + new_file_name 
         )
