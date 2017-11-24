@@ -36,6 +36,8 @@ class Generations(Dataset):
 
             data_name = chr(wave) + re.search('(.*)(?!$)', temp.metadata["name"]).group(1)
             temp.metadata["name"] = data_name
+            temp.metadata["conceptual_dataset"] = "net"
+            temp.metadata["sub_type"] = "net"
             temp.metadata["resources"][0]["path"] = data_name + ".csv"
             
             temp.write_tdp(

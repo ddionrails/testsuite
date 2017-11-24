@@ -23,7 +23,8 @@ for index, row in metadata.iterrows():
         format=row["format"],
         generationscript=row["generationscript"],
         splitlong=row["split_long"],
-        stats=row["stats"]
+        stats=row["stats"],
+        split=row["split"]
     )
     
     export_data(
