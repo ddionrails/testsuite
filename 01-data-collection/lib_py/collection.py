@@ -1,4 +1,10 @@
 import os,sys
+import logging
+
+os.system("sh 01-data-collection/setup.sh")
+
+logging.basicConfig(filename="01-data-collection/log/test.log", level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 sys.path.append(os.path.abspath("."))
 from metatest.test import Metatest
@@ -9,8 +15,8 @@ from ddi.dataset import Dataset
 
 def export_data(dataset, format, testscript):
 
-    print("")
-    print("[Data-Collection]: Export Data (%s)" % dataset)
+    logger.info("")
+    logger.info("[Data-Collection]: Export Data (%s)" % dataset)
 
     d1 = Dataset()
 
@@ -26,7 +32,7 @@ def export_data(dataset, format, testscript):
         )
     
     else:
-        print("[ERROR]: Wrong format: %s for %s" % (format, dataset))
+        logger.error("[ERROR]: Wrong format: %s for %s" % (format, dataset))
 
     # Export test
     d2 = Metatest(d1)

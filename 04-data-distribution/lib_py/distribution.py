@@ -2,6 +2,12 @@ import os,sys, shutil
 import numpy as np
 from os import listdir
 import re
+import logging
+
+os.system("sh 04-data-distribution/setup.sh")
+
+logging.basicConfig(filename="04-data-distribution/log/test.log", level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 sys.path.append(os.path.abspath("../ddi.py"))
 from ddi.dataset import Dataset

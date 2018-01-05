@@ -3,6 +3,12 @@ import numpy as np
 from os import listdir
 import re
 import math
+import logging
+
+os.system("sh 03-data-generation/setup.sh")
+
+logging.basicConfig(filename="03-data-generation/log/test.log", level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 sys.path.append(os.path.abspath("."))
 from metatest.test import Metatest

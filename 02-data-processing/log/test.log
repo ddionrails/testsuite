@@ -1,0 +1,46 @@
+INFO:lib_py.processing:
+INFO:lib_py.processing:[Data Processing]: Import Data (pl)
+INFO:ddi.convert.read_tdp:read "01-temp/pl.csv" and "01-temp/pl.json"
+INFO:ddi.convert.write_tdp:write "02-data-processing/input/pl.csv"
+INFO:ddi.convert.write_tdp:write "02-data-processing/input/pl.json"
+INFO:lib_py.processing:
+INFO:lib_py.processing:[Data Processing]: Data Processing (pl)
+INFO:ddi.convert.read_tdp:read "02-data-processing/input/pl.csv" and "02-data-processing/input/pl.json"
+INFO:ddi.convert.write_tdp:write "02-data-processing/output/pl.csv"
+INFO:ddi.convert.write_tdp:write "02-data-processing/output/pl.json"
+INFO:lib_py.processing:
+INFO:lib_py.processing:[Data Processing]: Export Data (pl)
+INFO:ddi.convert.read_tdp:read "02-data-processing/output/pl.csv" and "02-data-processing/output/pl.json"
+INFO:metatest.test:Testing Primary Keys...
+INFO:metatest.test:...check
+INFO:metatest.test:Testing Range...
+INFO:metatest.test:...check
+INFO:metatest.test:Testing Strings And Numbers...
+INFO:metatest.test:...check
+INFO:metatest.test:Testing Values...
+INFO:metatest.test:...check
+INFO:ddi.convert.write_tdp:write "02-temp/pl.csv"
+INFO:ddi.convert.write_tdp:write "02-temp/pl.json"
+INFO:lib_py.processing:
+INFO:lib_py.processing:[Data Processing]: Import Data (hl)
+INFO:ddi.convert.read_tdp:read "01-temp/hl.csv" and "01-temp/hl.json"
+INFO:ddi.convert.write_tdp:write "02-data-processing/input/hl.csv"
+INFO:ddi.convert.write_tdp:write "02-data-processing/input/hl.json"
+INFO:lib_py.processing:
+INFO:lib_py.processing:[Data Processing]: Data Processing (hl)
+INFO:ddi.convert.read_tdp:read "02-data-processing/input/hl.csv" and "02-data-processing/input/hl.json"
+INFO:ddi.convert.write_tdp:write "02-data-processing/output/hl.csv"
+INFO:ddi.convert.write_tdp:write "02-data-processing/output/hl.json"
+INFO:lib_py.processing:
+INFO:lib_py.processing:[Data Processing]: Export Data (hl)
+INFO:ddi.convert.read_tdp:read "02-data-processing/output/hl.csv" and "02-data-processing/output/hl.json"
+INFO:metatest.test:Testing Primary Keys...
+WARNING:metatest.test:hl: [Error]: 1 case(s) in hid and wave are not unique
+INFO:metatest.test:Testing Range...
+INFO:metatest.test:...check
+INFO:metatest.test:Testing Strings And Numbers...
+INFO:metatest.test:...check
+INFO:metatest.test:Testing Values...
+INFO:metatest.test:...check
+INFO:ddi.convert.write_tdp:write "02-temp/hl.csv"
+INFO:ddi.convert.write_tdp:write "02-temp/hl.json"

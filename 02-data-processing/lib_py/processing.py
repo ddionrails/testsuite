@@ -1,4 +1,10 @@
 import os,sys
+import logging
+
+os.system("sh 02-data-processing/setup.sh")
+
+logging.basicConfig(filename="02-data-processing/log/test.log", level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 sys.path.append(os.path.abspath("."))
 from metatest.test import Metatest
@@ -10,8 +16,8 @@ from metatest.cross_file_test import Crosstest
 
 def import_data(dataset, format, testscript):
 
-    print("")
-    print("[Data Processing]: Import Data (%s)" % dataset)
+    logger.info("")
+    logger.info("[Data Processing]: Import Data (%s)" % dataset)
 
     d1 = Dataset()
 
@@ -27,7 +33,7 @@ def import_data(dataset, format, testscript):
         )
     
     else:
-        print("[ERROR]: Wrong format: %s for %s" % (format, dataset))
+        logger.error("[ERROR]: Wrong format: %s for %s" % (format, dataset))
 
     d1.write_tdp(
         "02-data-processing/input/" + dataset + ".csv", 
@@ -37,8 +43,8 @@ def import_data(dataset, format, testscript):
     
 def process(dataset, format, testscript):
     
-    print("")
-    print("[Data Processing]: Data Processing (%s)" % dataset)
+    logger.info("")
+    logger.info("[Data Processing]: Data Processing (%s)" % dataset)
     
     d1 = Dataset()
 
@@ -54,7 +60,7 @@ def process(dataset, format, testscript):
         )
     
     else:
-        print("[ERROR]: Wrong format: %s for %s" % (format, dataset))
+        logger.error("[ERROR]: Wrong format: %s for %s" % (format, dataset))
 
 
 
@@ -70,8 +76,8 @@ def process(dataset, format, testscript):
 
 def export_data(dataset, format, testscript):
 
-    print("")
-    print("[Data Processing]: Export Data (%s)" % dataset)
+    logger.info("")
+    logger.info("[Data Processing]: Export Data (%s)" % dataset)
 
     d1 = Dataset()
 
@@ -87,7 +93,7 @@ def export_data(dataset, format, testscript):
         )
     
     else:
-        print("[ERROR]: Wrong format: %s for %s" % (format, dataset))
+        logger.error("[ERROR]: Wrong format: %s for %s" % (format, dataset))
 
     # Export test
     d2 = Metatest(d1)
