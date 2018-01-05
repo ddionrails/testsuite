@@ -2,3 +2,11 @@ study_name,dataset_name,period_name,analysis_unit_name,conceptual_dataset_name,l
 soep-test,hl,long,h,org/net,Household (long),"Dies ist eine Beschreibung, sie darf **Markdown** enthalten.",2
 soep-test,pl,long,p,org/net,Individuals (long),"Dies ist eine Beschreibung, sie darf **Markdown** enthalten.",2
 soep-test,pl_gen,long,p,gen,General p generations,,1
+soep-test,ah,1998,h,org/net,Household (wide),,
+soep-test,bh,1999,h,org/net,Household (wide),,
+soep-test,ch,2000,h,org/net,Household (wide),,
+soep-test,dh,2001,h,org/net,Household (wide),,
+soep-test,ap,1998,p,org/net,Individuals (wide),,
+soep-test,bp,1999,p,org/net,Individuals (wide),,
+soep-test,cp,2000,p,org/net,Individuals (wide),,
+soep-test,dp,2001,p,org/net,Individuals (wide),,

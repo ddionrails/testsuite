@@ -1,4 +1,5 @@
 import re, os,sys
+import copy
 
 sys.path.append(os.path.abspath("../ddi.py"))
 from ddi.dataset import Dataset
@@ -39,6 +40,15 @@ class Generations(Dataset):
             temp.metadata["conceptual_dataset"] = "net"
             temp.metadata["sub_type"] = "net"
             temp.metadata["resources"][0]["path"] = data_name + ".csv"
+            
+            var_path = temp.metadata["resources"][0]["schema"]["fields"]
+            for var in var_path:
+                try:
+                    if var["foreign_key"] and wave == ord("a"):
+                        foreign_origin = copy.deepcopy(var["foreign_key"])
+                    var["foreign_key"] = chr(wave) + re.search('(.*)(.)(\/.*)', foreign_origin).group(1) + re.search('(.*)(.)(\/.*)', foreign_origin).group(3)
+                except:
+                    pass
             
             temp.write_tdp(
                 "03-temp/" + data_name + ".csv",
