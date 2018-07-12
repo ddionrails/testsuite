@@ -1,7 +1,7 @@
 [
   {
     "study": "soep-test",
-    "analysis_unit": "hij",
+    "analysis_unit": "h",
     "period": 2001,
     "conceptual_dataset": "net-long",
     "sub_type": "net-long",
