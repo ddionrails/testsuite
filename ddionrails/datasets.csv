@@ -2,11 +2,11 @@ study_name,dataset_name,period_name,analysis_unit_name,conceptual_dataset_name,l
 soep-test,hl,long,h,org/net,Household (long),"Dies ist eine Beschreibung, sie darf **Markdown** enthalten.",2
 soep-test,pl,long,p,org/net,Individuals (long),"Dies ist eine Beschreibung, sie darf **Markdown** enthalten.",2
 soep-test,pl_gen,long,p,gen,General p generations,,1
-soep-test,ah,wave1,h,org/net,Household (wide),,
-soep-test,bh,wave2,h,org/net,Household (wide),,
-soep-test,ch,wave3,h,org/net,Household (wide),,
-soep-test,dh,wave4,h,org/net,Household (wide),,
-soep-test,ap,wave1,p,org/net,Individuals (wide),,
-soep-test,bp,wave2,p,org/net,Individuals (wide),,
-soep-test,cp,wave3,p,org/net,Individuals (wide),,
-soep-test,dp,wave4,p,org/net,Individuals (wide),,
+soep-test,ah,wave1,h,org/net,Household (wide),,1
+soep-test,bh,wave2,h,org/net,Household (wide),,1
+soep-test,ch,wave3,h,org/net,Household (wide),,1
+soep-test,dh,wave4,h,org/net,Household (wide),,1
+soep-test,ap,wave1,p,org/net,Individuals (wide),,1
+soep-test,bp,wave2,p,org/net,Individuals (wide),,1
+soep-test,cp,wave3,p,org/net,Individuals (wide),,1
+soep-test,dp,wave4,p,org/net,Individuals (wide),,1
