@@ -1,0 +1,7 @@
+name,parent_name,label,label_de,description,description_de
+id,,Identifier,IDs,,
+individual,,Individual topics,Personenbezogene Topics,,
+body,individual,Body and health,Körper und Gesundheit,,
+health,body,Health (individual),Gesundheit,,
+household,,Household topics,Haushaltsbezogene Topics,,
+income,household,Income (household),Haushaltseinkommen,,
