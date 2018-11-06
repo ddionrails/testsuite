@@ -1,13 +1,13 @@
-concept_namespace,concept_name,label,description,topic_name
-soep-test,pid,person ID,,id
-soep-test,hid,household ID,,id
-soep-test,wave,wave,,id
-soep-test,pbodyweight,body weight,,body
-soep-test,pbodyheight,body height,,body
-soep-test,weight,weight,,body
-soep-test,pstat,status,,
-soep-test,psmo,smoking,,health
-soep-test,hincome,income,,income
-soep-test,hneighbor,neighbor,,
-soep-test,htext,text,,
-soep-test,pbmi,bmi,,health
+concept_namespace,name,label,label_de,description,topic_name
+soep-test,pid,person ID,Personen ID,,id
+soep-test,hid,household ID,Haushalt ID,,id
+soep-test,wave,wave,Welle,,id
+soep-test,pbodyweight,body weight,Körpergewicht,,body
+soep-test,pbodyheight,body height,Körpergröße,,body
+soep-test,weight,weight,Gewicht,,body
+soep-test,pstat,status,Status,,
+soep-test,psmo,smoking,Raucher,,health
+soep-test,hincome,income,Einkommen,,income
+soep-test,hneighbor,neighbor,Nachbar,,
+soep-test,htext,text,Text,,
+soep-test,pbmi,BMI,BMI,,health
