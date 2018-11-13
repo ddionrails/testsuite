@@ -1,4 +1,6 @@
 type,study_name,dataset_name,variable_name,instrument_name,question_name,url,url_text
 study,soep-test,,,,,https://github.com/ddionrails/testsuite,Link to the testsuite repository
 variable,soep-test,pl_gen,bmi,,,https://en.wikipedia.org/wiki/Body_mass_index,BMI (Wikipedia)
+dataset,soep-test,pl_gen,,,,https://en.wikipedia.org/wiki/Body_mass_index,BMI (Wikipedia) 2
 question,soep-test,,,soep-test-2011-ap,bodyweight,https://en.wikipedia.org/wiki/Mass_versus_weight,Mass versus weight
+instrument,soep-test,,,soep-test-2011-ap,,https://en.wikipedia.org/wiki/Mass_versus_weight,Mass versus weight 2
