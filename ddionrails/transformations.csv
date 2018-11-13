@@ -1,3 +1,8 @@
 target_study_name,target_dataset_name,target_release_name,target_variable_name,origin_study_name,origin_dataset_name,origin_release_name,origin_variable_name
 soep-test,pl_gen,,bmi,soep-test,pl,,bodyweight
 soep-test,pl_gen,,bmi,soep-test,pl,,bodyheight
+soep-test,pl,,bodyweight,soep-test,ap,,bodyweight
+soep-test,pl,,bodyweight,soep-test,bp,,bodyweight
+soep-test,pl,,bodyweight,soep-test,cp,,bodyweight
+soep-test,pl,,bodyweight,soep-test,dp,,bodyweight
+soep-test,pl_gen,,bodyweight,soep-test,pl,,bodyweight
