@@ -1,0 +1,114 @@
+{
+  "study": "soep-test",
+  "label": "Questionnaire 2001 bp",
+  "questions": {
+    "bodyweight": {
+      "sn": 1,
+      "question": "Bodyweight",
+      "items": [
+        {
+          "study": "soep-test",
+          "number": "bodyweight",
+          "text": "Body weight.",
+          "text_de": "K\u00f6rpergewicht",
+          "scale": "num"
+        }
+      ]
+    },
+    "bodyheight": {
+      "sn": 2,
+      "question": "Bodyheight",
+      "items": [
+        {
+          "study": "soep-test",
+          "number": "bodyheight",
+          "text": "Body height.",
+          "text_de": "K\u00f6rpergr\u00f6\u00dfe",
+          "scale": "num"
+        }
+      ]
+    },
+    "stat": {
+      "sn": 3,
+      "question": "Stat",
+      "items": [
+        {
+          "study": "soep-test",
+          "sn": 0,
+          "text_de": "Beziehungsstatus.",
+          "text": "Relationship status.",
+          "item": "root",
+          "scale": "cat",
+          "answer_list": "stat",
+          "answers": [
+            {
+              "value": 1,
+              "label": "Single",
+              "label_de": "Ledig"
+            },
+            {
+              "value": 2,
+              "label": "Married",
+              "label_de": "Verheiratet"
+            },
+            {
+              "value": 3,
+              "label": "Divorced",
+              "label_de": "Geschieden"
+            },
+            {
+              "value": 4,
+              "label": "Widowed",
+              "label_de": "Verwitwet"
+            }
+          ],
+          "number": "stat"
+        }
+      ]
+    },
+    "text": {
+      "sn": 5,
+      "question": "Text",
+      "items": [
+        {
+          "study": "soep-test",
+          "number": "text",
+          "text": "Text",
+          "text_de": "Text",
+          "scale": "string"
+        }
+      ]
+    },
+    "smo": {
+      "sn": 4,
+      "question": "Smo",
+      "items": [
+        {
+          "study": "soep-test",
+          "sn": 0,
+          "text_de": "Rauchen?",
+          "text": "Smoking?",
+          "item": "root",
+          "scale": "cat",
+          "answer_list": "smo",
+          "answers": [
+            {
+              "value": 1,
+              "label": true,
+              "label_de": "Ja"
+            },
+            {
+              "value": 2,
+              "label": false,
+              "label_de": "Nein"
+            }
+          ],
+          "number": "smo"
+        }
+      ]
+    }
+  },
+  "period": 2001.0,
+  "questionnaire": "soep-test-2001-bp",
+  "instrument": "soep-test-2001-bp"
+}
