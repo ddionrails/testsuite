@@ -1,3 +1,4 @@
-name,title,author,date,abstract,cite,period_name,sub_type,study_name,url
-first,A publication title,Max Mustermann,2018,Some *description*,Cite me as…,2018,article,soep-test,https://de.wikipedia.org/wiki/Mustermann#Max_Mustermann
-name,title,author,date,abstract,cite,period,sub_type,study,url
+name,title,author,year,abstract,cite,sub_type,study_name,url,doi
+first,A publication title,Max Mustermann,2018,Some *description*,Cite me as…,article,soep-test,https://de.wikipedia.org/wiki/Mustermann#Max_Mustermann,
+name,title,author,date,abstract,cite,sub_type,study,url,
+wenizig,Metadaten,Knut Wenzig,2019,"Die Digitalisierung der Wissenschaften (Thimm/Nehls, Kapitel 69 in diesem Band) hat es mit sich gebracht, dass im gesamten Forschungszyklus (Stein und Przyborski/Wolrab-Sahr, Kapitel 7 und 8 in diesem Band) die Rolle von strukturierten Informationen, mit denen einzelne Elemente in diesem Zyklus beschrieben werden können, ständig zunimmt. Für diese Struktur entwickeln sich zunehmend Standards, auf denen (Web-)Dienste aufbauen, die in wissenschaftlichen Prozessen eine wichtige Rolle übernehmen können, in dem sie nicht nur Informationen liefern, sondern auch unmittelbar zur Steuerung der Prozesse beitragen.",Wenzig 2019: Metadaten,book_chapter,,https://link.springer.com/chapter/10.1007%2F978-3-658-21308-4_92,10.1007/978-3-658-21308-4_92

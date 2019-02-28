@@ -2,6 +2,12 @@
 name: soep-test
 label: SOEP Test Study
 config:
+    variables:
+        label_table: True
+    script_generators:
+        -   soep-stata
+        -   soep-spss
+        -   soep-r
 ---
 # SOEP Test Study
 
