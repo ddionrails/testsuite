@@ -13,7 +13,7 @@
     "name_cs": "hid",
     "label": "HID",
     "scale": "num",
-    "uni": {
+    "categories": {
       "density": [
         0.06807956358302689,
         0.07244497958471803,
@@ -111,7 +111,7 @@
     "name_cs": "wave",
     "label": "wave",
     "scale": "num",
-    "uni": {
+    "categories": {
       "density": [],
       "min": 1999.0,
       "max": 1999.0,
@@ -143,7 +143,7 @@
     "name_cs": "income",
     "label": "Household Net Income",
     "scale": "num",
-    "uni": {
+    "categories": {
       "density": [
         1.3406545193702616e-06,
         1.3175567722417737e-06,
@@ -241,7 +241,7 @@
     "name_cs": "neighbor",
     "label": "Neighborhood Of Household",
     "scale": "cat",
-    "uni": {
+    "categories": {
       "frequencies": [
         2,
         3,
@@ -325,7 +325,7 @@
     "name_cs": "text",
     "label": "text",
     "scale": "str",
-    "uni": {
+    "categories": {
       "frequencies": [
         5
       ],

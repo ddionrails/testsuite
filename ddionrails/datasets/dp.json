@@ -13,7 +13,7 @@
     "name_cs": "pid",
     "label": "PID",
     "scale": "num",
-    "uni": {
+    "categories": {
       "density": [
         0.014496259435918563,
         0.015145131837045281,
@@ -66,7 +66,7 @@
     "name_cs": "hid",
     "label": "HID",
     "scale": "num",
-    "uni": {
+    "categories": {
       "density": [
         0.14179923110155596,
         0.14503335313798638,
@@ -119,7 +119,7 @@
     "name_cs": "wave",
     "label": "wave",
     "scale": "num",
-    "uni": {
+    "categories": {
       "density": [],
       "min": 2001.0,
       "max": 2001.0,
@@ -151,7 +151,7 @@
     "name_cs": "bodyweight",
     "label": "Body weight.",
     "scale": "num",
-    "uni": {
+    "categories": {
       "density": [
         0.004897198691766791,
         0.0054395398743396686,
@@ -204,7 +204,7 @@
     "name_cs": "bodyheight",
     "label": "Body height.",
     "scale": "num",
-    "uni": {
+    "categories": {
       "density": [
         0.0019491270793164674,
         0.002001489300154524,
@@ -257,7 +257,7 @@
     "name_cs": "weight",
     "label": "weight",
     "scale": "num",
-    "uni": {
+    "categories": {
       "density": [
         0.1058628034196731,
         0.1116388317600976,
@@ -310,7 +310,7 @@
     "name_cs": "stat",
     "label": "Relationship status.",
     "scale": "cat",
-    "uni": {
+    "categories": {
       "frequencies": [
         2,
         2,
@@ -352,7 +352,7 @@
     "name_cs": "smo",
     "label": "Smoking?",
     "scale": "cat",
-    "uni": {
+    "categories": {
       "frequencies": [
         1,
         5
@@ -386,7 +386,7 @@
     "name_cs": "text",
     "label": "text",
     "scale": "str",
-    "uni": {
+    "categories": {
       "frequencies": [
         5
       ],
